@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:fsu.digital.flvc.org:fsu_547356</identifier>
+      <datestamp>2018-10-23T18:53:53Z</datestamp>
+      <setSpec>fsu_stjohnsepiscopalchurchrecords</setSpec>
+    </header>
+    <metadata>
+      <mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+        <identifier type="IID">FSU_MSS2016006_S001_I019_parent</identifier>
+        <extension>
+          <flvc:flvc>
+            <flvc:owningInstitution>FSU</flvc:owningInstitution>
+            <flvc:submittingInstitution>FSU</flvc:submittingInstitution>
+          </flvc:flvc>
+        </extension>
+        <titleInfo>
+          <title>St. John's Episcopal Church Interment Records</title>
+        </titleInfo>
+        <name type="corporate">
+          <namePart>St. John's Episcopal Church</namePart>
+          <role>
+            <roleTerm type="text" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators">Creator</roleTerm>
+            <roleTerm type="code" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators">cre</roleTerm>
+          </role>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <genre valueURI="http://id.loc.gov/authorities/genreForms/gf2014026163.html">Records (Documents)</genre>
+        <originInfo>
+          <dateIssued encoding="w3cdtf">1957-05-16</dateIssued>
+        </originInfo>
+        <language>
+          <languageTerm type="text" authority="iso639-2b">English</languageTerm>
+          <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+        </language>
+        <physicalDescription>
+          <digitalOrigin>reformatted digital</digitalOrigin>
+        </physicalDescription>
+        <subject authority="tgn">
+          <geographicCode>7013938</geographicCode>
+        </subject>
+        <accessCondition xlink:href="http://rightsstatements.org/vocab/InC/1.0/" type="use and reproduction">Use of this item is provided for non-commercial, personal, educational, and research use only. Florida State University Libraries is providing access to these materials for educational and research purposes and makes no warranty with regard to their use for other purposes. The written permission of the copyright owners and/or other rights holders (such as holders of publicity and/or privacy rights) is required for distribution, reproduction, or other use of protected items beyond that allowed by fair use or other statutory exemptions (see Title 17, U.S.C.). For information about the copyright and reproduction rights for this item, please contact Special Collections &amp; Archives, Florida State University Libraries, Tallahassee, Florida: https://www.lib.fsu.edu/department/special-collections-archives.</accessCondition>
+        <relatedItem type="host">
+          <titleInfo>
+            <title>St. John's Episcopal Church Records, 1832-2004</title>
+          </titleInfo>
+          <location>
+            <physicalLocation>Special Collections &amp; Archives, Florida State University Libraries, Tallahassee, Florida.</physicalLocation>
+            <url displayLabel="Finding Aid">http://purl.fcla.edu/fsu/MSS_2016-006</url>
+          </location>
+        </relatedItem>
+        <recordInfo>
+          <descriptionStandard>dacs</descriptionStandard>
+          <recordCreationDate>2018-04-06</recordCreationDate>
+        </recordInfo>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects" valueURI="http://id.loc.gov/authorities/subjects/sh85025502">
+          <topic>Church</topic>
+        </subject>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects" valueURI="http://id.loc.gov/authorities/subjects/sh85021756">
+          <topic>Cemeteries</topic>
+        </subject>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects" valueURI="http://id.loc.gov/authorities/subjects/sh88002572">
+          <topic>Sacred space</topic>
+        </subject>
+        <location displayLabel="purl">
+          <url>http://purl.flvc.org/fsu/fd/FSU_MSS2016006_S001_I019_parent</url>
+        </location>
+      </mods:mods>
+    </metadata>
+  </record>
+</oai>

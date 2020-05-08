@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:fsu.digital.flvc.org:fsu_509655</identifier>
+      <datestamp>2019-01-25T19:22:49Z</datestamp>
+      <setSpec>fsu_leonhigh</setSpec>
+    </header>
+    <metadata>
+      <mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-4.xsd" version="3.4">
+        <identifier type="IID">FSU_LeonHighYB_1954</identifier>
+        <titleInfo>
+          <nonSort>The</nonSort>
+          <title>Lion's Tale</title>
+          <subTitle>1954</subTitle>
+        </titleInfo>
+        <name type="corporate" authority="naf" valueURI="http://id.loc.gov/authorities/names/no2015099861">
+          <namePart>Leon High School (Tallahassee, Fla.)</namePart>
+          <role>
+            <roleTerm type="text" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators">Creator</roleTerm>
+            <roleTerm type="code" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators">cre</roleTerm>
+          </role>
+        </name>
+        <name type="personal">
+          <namePart type="family">Johnson</namePart>
+          <namePart type="given">Gloria</namePart>
+          <role>
+            <roleTerm type="text" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators">Editor</roleTerm>
+            <roleTerm type="code" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators">edt</roleTerm>
+          </role>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <genre valueURI="http://id.loc.gov/authorities/genreForms/gf2014026208" authority="lcgft">Yearbooks</genre>
+        <originInfo>
+          <dateIssued encoding="w3cdtf">1954</dateIssued>
+          <publisher>Seniors of Leon High School</publisher>
+          <place>
+            <placeTerm>Tallahassee, Florida</placeTerm>
+          </place>
+        </originInfo>
+        <language>
+          <languageTerm type="text" authority="iso639-2b">English</languageTerm>
+          <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+        </language>
+        <physicalDescription>
+          <extent>178 pages</extent>
+          <extent>28 cm</extent>
+          <digitalOrigin>reformatted digital</digitalOrigin>
+        </physicalDescription>
+        <subject authority="lctgm" authorityURI="http://id.loc.gov/vocabulary/graphicMaterials">
+          <topic valueURI="http://id.loc.gov/vocabulary/graphicMaterials/tgm010299">Students</topic>
+        </subject>
+        <subject authority="tgn">
+          <geographicCode>7013938</geographicCode>
+        </subject>
+        <accessCondition xlink:href="http://rightsstatements.org/vocab/InC/1.0/" type="use and reproduction">Use of this item is provided for non-commercial, personal, educational, and research use only. Florida State University Libraries is providing access to these materials for educational and research purposes and makes no warranty with regard to their use for other purposes. The written permission of the copyright owners and/or other rights holders (such as holders of publicity and/or privacy rights) is required for distribution, reproduction, or other use of protected items beyond that allowed by fair use or other statutory exemptions (see Title 17, U.S.C.). For information about the copyright and reproduction rights for this item, please contact Special Collections &amp; Archives, Florida State University Libraries, Tallahassee, Florida: https://www.lib.fsu.edu/department/special-collections-archives.</accessCondition>
+        <relatedItem type="host">
+          <location>
+            <physicalLocation>Leon High School, Tallahassee, Florida</physicalLocation>
+          </location>
+        </relatedItem>
+        <recordInfo>
+          <descriptionStandard>dacs</descriptionStandard>
+          <recordCreationDate>2017-09-19</recordCreationDate>
+        </recordInfo>
+        <identifier type="fedora">fsu:509655</identifier>
+        <extension>
+          <flvc:flvc>
+            <flvc:owningInstitution>FSU</flvc:owningInstitution>
+            <flvc:submittingInstitution>FSU</flvc:submittingInstitution>
+          </flvc:flvc>
+        </extension>
+        <location displayLabel="purl">
+          <url>http://purl.flvc.org/fsu/fd/FSU_LeonHighYB_1954</url>
+        </location>
+      </mods:mods>
+    </metadata>
+  </record>
+</oai>

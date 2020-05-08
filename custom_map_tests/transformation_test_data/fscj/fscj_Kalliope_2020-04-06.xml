@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:fscj.digital.flvc.org:fscj_164</identifier>
+      <datestamp>2018-12-11T14:34:12Z</datestamp>
+      <setSpec>fscj_Kalliope</setSpec>
+    </header>
+    <metadata>
+      <mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+        <extension>
+          <flvc:flvc>
+            <flvc:owningInstitution>FSCJ</flvc:owningInstitution>
+          </flvc:flvc>
+        </extension>
+        <titleInfo type="uniform">
+          <title>Kalliope</title>
+        </titleInfo>
+        <titleInfo type="alternative">
+          <title>Kalliope: a Journal of women's art</title>
+        </titleInfo>
+        <titleInfo type="alternative">
+          <title>Kalliope: a journal of women's literature and art</title>
+        </titleInfo>
+        <identifier type="issn">0735-7885</identifier>
+        <identifier type="oclc">8981808</identifier>
+        <typeOfResource>text</typeOfResource>
+        <genre authority="marcgt">journal</genre>
+        <originInfo>
+          <place>
+            <placeTerm type="text">Jacksonville, FL</placeTerm>
+          </place>
+          <publisher>Florida State College at Jacksonville, 2009-</publisher>
+          <publisher>Florida Community College at Jacksonville, 1986-2009</publisher>
+          <publisher>Florida Junior College, 1979-1986</publisher>
+          <frequency>Semiannual, 2003-2008</frequency>
+          <frequency>Triannual, 1979-2002</frequency>
+          <issuance>serial</issuance>
+        </originInfo>
+        <physicalDescription>
+          <form>text</form>
+        </physicalDescription>
+        <note>Kalliope, a journal of women's art is indexed in the American Humanities Index and The Index of American Periodical Verse.&#xD;
+&#xD;
+Materials published in Kaliope do not necessarily represent the opinions or views of Florida State College at Jacksonville.</note>
+        <subject>
+          <topic>Women artists -- United States -- Periodicals</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>Arts, American -- 20th century -- Periodicals</topic>
+        </subject>
+        <subject>
+          <topic>Arts, American -- 21st century -- Periodicals</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>Women artists</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>Women in art</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>Women in literature</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>Women and literature -- United States</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>American poetry -- Women authors</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>Women poets</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>Women--Poetry</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>Women poets, American</topic>
+        </subject>
+        <accessCondition type="useAndReproduction">Florida State College at Jacksonville (formerly Florida Community College at Jacksonville) holds the copyright to each entire published journal issue. All rights reserved.</accessCondition>
+        <identifier type="IID">Kalliope</identifier>
+        <location displayLabel="purl">
+          <url>http://purl.flvc.org/fscj/fd/Kalliope</url>
+        </location>
+        <titleInfo>
+          <title>Kalliope</title>
+        </titleInfo>
+        <accessCondition type="use and reproduction" displayLabel="RightsStatements.org">http://rightsstatements.org/vocab/InC/1.0/</accessCondition>
+      </mods:mods>
+    </metadata>
+  </record>
+</oai>

@@ -1,0 +1,82 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:broward.digital.flvc.org:broward_820</identifier>
+      <datestamp>2019-09-06T20:07:26Z</datestamp>
+      <setSpec>broward_thumacol</setSpec>
+    </header>
+    <metadata>
+      <mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+        <extension>
+          <flvc:flvc>
+            <flvc:owningInstitution>Broward</flvc:owningInstitution>
+          </flvc:flvc>
+        </extension>
+        <titleInfo>
+          <title>Members of the college family also gathered for a 30th anniversary group photo</title>
+        </titleInfo>
+        <identifier type="IID">BC445</identifier>
+        <identifier type="CTIID">114B</identifier>
+        <name type="personal" authority="naf">
+          <namePart>Thuma, Cynthia</namePart>
+          <role>
+            <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+          </role>
+        </name>
+        <typeOfResource>still image</typeOfResource>
+        <genre authority="aat">black-and-white photographs</genre>
+        <genre authority="aat">photographs</genre>
+        <originInfo>
+          <dateIssued>1990</dateIssued>
+        </originInfo>
+        <physicalDescription>
+          <internetMediaType>image/tiff</internetMediaType>
+          <digitalOrigin>reformatted digital</digitalOrigin>
+          <extent>7 x 5 in.</extent>
+        </physicalDescription>
+        <subject>
+          <topic>Broward Community College</topic>
+          <genre>Pictorial works</genre>
+        </subject>
+        <subject authority="lcsh">
+          <topic>Community colleges</topic>
+          <geographic>Florida</geographic>
+          <geographic>Broward County</geographic>
+        </subject>
+        <subject>
+          <topic>30th Anniversary</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>Anniversaries</topic>
+        </subject>
+        <subject>
+          <temporal>1990</temporal>
+        </subject>
+        <note>Abstract based on Cynthia Thuma's Broward Community College (2002).</note>
+        <location>
+          <physicalLocation>Broward College Archives and Special Collections</physicalLocation>
+        </location>
+        <accessCondition>Copyright &#xA9; Broward College. All rights reserved. Content is the property of Broward College and is protected by United States copyright and trademark laws. The content and text may not be copied, translated or distributed in any manner (electronic, web or printed) without the prior written consent of Broward College with the exception of properly-attributed quotations and other "fair use" exemptions provided for under copyright law. All scanned page images (of books, journals, newspapers, magazines and pamphlets) produced by Broward College, or its predecessors (Junior College of Broward County, Broward Junior College, Broward Community College) are subject to Copyright Law, and may be not used without restriction for any purpose whatsoever.</accessCondition>
+        <language>
+          <languageTerm type="text" authority="iso639-2b">English</languageTerm>
+        </language>
+        <abstract displayLabel="Abstract">Members of the college family also gathered for a 30th anniversary group photo. The photo was used on the cover of the Fort Lauderdale phone book.</abstract>
+        <location displayLabel="purl">
+          <url>http://purl.flvc.org/broward/fd/BC445</url>
+        </location>
+        <note displayLabel="Description">Read on the photograph: "BCC [logo], 1960-1990, 30 ANNIVERSARY."</note>
+        <note>Broward Community College 30th Anniversary.</note>
+        <subject>
+          <topic>Telephone directories</topic>
+        </subject>
+        <accessCondition type="use and reproduction" displayLabel="RightsStatements.org">http://rightsstatements.org/vocab/InC-EDU/1.0/</accessCondition>
+        <subject>
+          <name type="corporate" authority="naf">
+            <namePart>Broward Community College</namePart>
+          </name>
+        </subject>
+      </mods:mods>
+    </metadata>
+  </record>
+</oai>

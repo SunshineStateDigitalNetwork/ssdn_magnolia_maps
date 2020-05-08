@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:fau.digital.flvc.org:fau_7623</identifier>
+      <datestamp>2019-11-04T19:31:20Z</datestamp>
+      <setSpec>fau_kemery</setSpec>
+    </header>
+    <metadata>
+      <mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+        <extension>
+          <flvc:flvc>
+            <flvc:owningInstitution>FAU</flvc:owningInstitution>
+            <flvc:submittingInstitution>FAU</flvc:submittingInstitution>
+          </flvc:flvc>
+        </extension>
+        <titleInfo>
+          <title>Letter to Mrs. A. M. Kemery, July 24, 1918</title>
+        </titleInfo>
+        <identifier type="IID">FAU3166876</identifier>
+        <name type="personal">
+          <namePart>Kemery, Marvin E.</namePart>
+          <role>
+            <roleTerm type="text" authority="marcrelator">creator</roleTerm>
+          </role>
+        </name>
+        <genre>correspondence</genre>
+        <originInfo>
+          <dateIssued encoding="w3cdtf" keyDate="yes">1918-07-24</dateIssued>
+          <place>
+            <placeTerm type="text">Boca Raton, Fla.</placeTerm>
+          </place>
+          <publisher>Florida Atlantic University Digital Library</publisher>
+        </originInfo>
+        <language>
+          <languageTerm type="text">English</languageTerm>
+        </language>
+        <physicalDescription>
+          <form>text</form>
+        </physicalDescription>
+        <subject>
+          <topic>World War, 1914-1918.</topic>
+        </subject>
+        <subject>
+          <topic>World War, 1914-1918 --Correspondence.</topic>
+        </subject>
+        <subject>
+          <topic>World War, 1914-1918 -- Campaigns -- Western Front.</topic>
+        </subject>
+        <subject>
+          <topic>World War, 1914-1918 -- Personal narratives, American.</topic>
+        </subject>
+        <subject>
+          <topic>United States. Army. Field Artillery.</topic>
+        </subject>
+        <relatedItem type="otherFormat">
+          <titleInfo>
+            <partNumber>Container: Box 1, Folder 8 Marvin E. Kemery Collection</partNumber>
+          </titleInfo>
+        </relatedItem>
+        <typeOfResource>text</typeOfResource>
+        <location displayLabel="purl">
+          <url>http://purl.flvc.org/fau/fd/FAU3166876</url>
+          <holdingSimple/>
+        </location>
+        <abstract displayLabel="Summary">3-page handwritten letter with envelope; Kemery requests from Mother dates of letters written to Mother so that he could determine if all were being received to date; described stay in small French village and the way of life of the natives.  Marvin E. Kemery Digital Collection.</abstract>
+        <relatedItem type="series">
+          <titleInfo>
+            <title>Florida Atlantic University Digital Library Collections</title>
+          </titleInfo>
+        </relatedItem>
+        <accessCondition type="use and reproduction">Author is the copyright holder.</accessCondition>
+        <accessCondition type="use and reproduction" displayLabel="RightsStatements.org">http://rightsstatements.org/vocab/InC/1.0/</accessCondition>
+        <identifier type="fedora">fau:7623</identifier>
+      </mods:mods>
+    </metadata>
+  </record>
+</oai>

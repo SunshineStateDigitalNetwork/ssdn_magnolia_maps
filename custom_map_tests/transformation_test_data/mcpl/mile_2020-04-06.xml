@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:dpSobek:MM00002192_00001</identifier>
+      <datestamp>2017-10-06</datestamp>
+      <setSpec>oai:dpSobek:mile</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/  http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+        <dc:title>Ferguson home</dc:title>
+        <dc:creator>Ida Woodward Barron Collection</dc:creator>
+        <dc:creator>May Hill Russell Library -- History Dept</dc:creator>
+        <dc:creator>Monroe County Public Library System</dc:creator>
+        <dc:date>1890</dc:date>
+        <dc:description>(Original Location)  History Dept., May Hill Russell Library; 700 Fleming St., Key West, FL 33040.</dc:description>
+        <dc:description>Date of photo is approximately 1890.</dc:description>
+        <dc:format>1 photograph : b&amp;w ; 8 x 10 in.</dc:format>
+        <dc:identifier>000000037</dc:identifier>
+        <dc:identifier>AAA6344  QF</dc:identifier>
+        <dc:identifier>MM00002192</dc:identifier>
+        <dc:subject>Historic buildings -- Photographs ( lcsh )</dc:subject>
+        <dc:coverage>Florida</dc:coverage>
+        <dc:coverage>Key West</dc:coverage>
+        <dc:subject>Photographs ( lcsh )</dc:subject>
+        <dc:coverage>Naval station Key West (Fla.)</dc:coverage>
+        <dc:subject>Buildings, structures, etc -- Photographs ( lcsh )</dc:subject>
+        <dc:coverage>Key West (Fla.)</dc:coverage>
+        <dc:subject>Photographs ( lcsh )</dc:subject>
+        <dc:coverage>Key West</dc:coverage>
+        <dc:subject>Photographs ( lcsh )</dc:subject>
+        <dc:coverage>Monroe County (Fla.)</dc:coverage>
+        <dc:subject> ( ceeus )</dc:subject>
+        <dc:coverage>Monroe</dc:coverage>
+        <dc:coverage>12087</dc:coverage>
+        <dc:type>still image</dc:type>
+        <dc:identifier>http://dpanther.fiu.edu/dpService/dpPurlService/purl/MM00002192/00001</dc:identifier>
+        <dc:identifier.thumbnail>http://dpanther.fiu.edu/sobek/content/MM/00/00/21/92/00001/51133_MM00002192_thm.jpg</dc:identifier.thumbnail>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</oai>

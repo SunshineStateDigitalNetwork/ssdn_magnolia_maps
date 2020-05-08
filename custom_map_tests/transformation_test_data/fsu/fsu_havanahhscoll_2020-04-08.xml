@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:fsu.digital.flvc.org:fsu_688638</identifier>
+      <datestamp>2019-08-07T12:19:05Z</datestamp>
+      <setSpec>fsu_havanahhscoll</setSpec>
+    </header>
+    <metadata>
+      <mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd" version="3.6">
+        <identifier type="IID">FSU_HHHS_Scrapbook_1928-1932_parent</identifier>
+        <extension>
+          <flvc:flvc>
+            <flvc:owningInstitution>FSU</flvc:owningInstitution>
+            <flvc:submittingInstitution>FSU</flvc:submittingInstitution>
+          </flvc:flvc>
+        </extension>
+        <titleInfo>
+          <title>Gadsden County Home Demonstration Scrapbook</title>
+          <subTitle>1928-1932</subTitle>
+          <partNumber>Volume II</partNumber>
+        </titleInfo>
+        <name type="corporate" authority="naf" valueURI="http://id.loc.gov/authorities/names/n81026438">
+          <namePart>Gadsden County (Fla.)</namePart>
+          <role>
+            <roleTerm type="text" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators">Creator</roleTerm>
+            <roleTerm type="code" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators">cre</roleTerm>
+          </role>
+        </name>
+        <name type="corporate" authority="naf" valueURI="http://id.loc.gov/authorities/names/n82012383">
+          <namePart>Florida Cooperative Extension Service</namePart>
+          <role>
+            <roleTerm type="text" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators">Creator</roleTerm>
+            <roleTerm type="code" authority="marcrelator" authorityURI="http://id.loc.gov/vocabulary/relators">cre</roleTerm>
+          </role>
+        </name>
+        <typeOfResource>mixed material</typeOfResource>
+        <genre valueURI="http://id.loc.gov/vocabulary/graphicMaterials/tgm009266" authority="gmgpc">Scrapbooks</genre>
+        <originInfo>
+          <dateIssued encoding="w3cdtf" point="start">1928</dateIssued>
+          <dateIssued encoding="w3cdtf" point="end">1932</dateIssued>
+        </originInfo>
+        <language>
+          <languageTerm type="text" authority="iso639-2b">English</languageTerm>
+          <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+        </language>
+        <physicalDescription>
+          <extent>516 pages</extent>
+          <digitalOrigin>reformatted digital</digitalOrigin>
+        </physicalDescription>
+        <abstract displayLabel="Summary">Scrapbook detailing the programs, events and participants in Home Demonstration Extension Service work in Gadsden County, Florida from 1928-1932. The book includes reports, letters, photographs and newspaper clippings. </abstract>
+        <subject authority="tgn">
+          <geographicCode>2000268</geographicCode>
+        </subject>
+        <accessCondition xlink:href="http://rightsstatements.org/vocab/InC/1.0/" type="use and reproduction">http://rightsstatements.org/vocab/InC/1.0/</accessCondition>
+        <accessCondition type="use and reproduction">Use of this item is provided for non-commercial, personal, educational, and research use only. For further information about the copyright and reproduction rights for  this item, please contact Special Collections &amp; Archives, Florida State University Libraries, Tallahassee, Florida. </accessCondition>
+        <relatedItem type="host">
+          <titleInfo>
+            <title>Gadsden County Extension Services Scrapbooks</title>
+          </titleInfo>
+          <location>
+            <physicalLocation>Havana History &amp; Heritage Society, Havana, Florida</physicalLocation>
+          </location>
+        </relatedItem>
+        <recordInfo>
+          <descriptionStandard>dacs</descriptionStandard>
+          <recordCreationDate>2019-08-01</recordCreationDate>
+        </recordInfo>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects" valueURI="http://id.loc.gov/authorities/subjects/sh85061672">
+          <topic>Home demonstration work</topic>
+        </subject>
+        <subject authority="lcsh" authorityURI="http://id.loc.gov/authorities/subjects" valueURI="http://id.loc.gov/authorities/subjects/sh85061681">
+          <topic>Home economics, Rural</topic>
+        </subject>
+        <subject authority="lctgm" authorityURI="http://id.loc.gov/vocabulary/graphicMaterials" valueURI="http://id.loc.gov/vocabulary/graphicMaterials/tgm000152">
+          <topic>Agriculture</topic>
+        </subject>
+        <location displayLabel="purl">
+          <url>http://purl.flvc.org/fsu/fd/FSU_HHHS_Scrapbook_1928-1932_parent</url>
+        </location>
+      </mods:mods>
+    </metadata>
+  </record>
+</oai>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:cdm17273.contentdm.oclc.org:p17273coll5/571</identifier>
+      <datestamp>2020-02-10</datestamp>
+      <setSpec>p17273coll5</setSpec>
+    </header>
+    <metadata>
+      <oai_qdc:qualifieddc xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
+        <dc:title>Mykonos, Greece, 1981</dc:title>
+        <dc:creator>Sanchez, Emilio, 1921-1999</dc:creator>
+        <dc:date>1981</dc:date>
+        <dc:date>1980-1990</dc:date>
+        <dcterms:spatial>Greece (Europe, World : nation)</dcterms:spatial>
+        <dc:subject>
+Architectural &amp; site components; Islands; Cities &amp; towns;</dc:subject>
+        <dcterms:medium>
+sketchbooks; color pencils; color photographs;</dcterms:medium>
+        <dcterms:extent>44 pages; 6 X 4 in. (15 X 10 cm)</dcterms:extent>
+        <dc:type>Image</dc:type>
+        <dc:source>Permanent Art Collection. Miami-Dade Public Library System.</dc:source>
+        <dcterms:isPartOf>Emilio Sanchez Artworks</dcterms:isPartOf>
+        <dc:identifier>mdplpaces201902210001</dc:identifier>
+        <dcterms:provenance>Gift of the artist</dcterms:provenance>
+        <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
+        <dcterms:accessRights>https://cdm17273.contentdm.oclc.org/digital/about</dcterms:accessRights>
+        <dc:rights>In copyright.</dc:rights>
+        <dc:identifier>http://cdm17273.contentdm.oclc.org/cdm/ref/collection/p17273coll5/id/571</dc:identifier>
+      </oai_qdc:qualifieddc>
+    </metadata>
+  </record>
+</oai>

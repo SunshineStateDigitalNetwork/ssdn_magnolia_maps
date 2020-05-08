@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:fgcu.digital.flvc.org:fgcu_28746</identifier>
+      <datestamp>2019-03-12T15:54:28Z</datestamp>
+      <setSpec>fgcu_0217</setSpec>
+    </header>
+    <metadata>
+      <mods:mods xmlns="http://www.loc.gov/mods/v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:flvc="info:flvc/manifest/v1" xmlns:mods="http://www.loc.gov/mods/v3" xmlns:dcterms="http://purl.org/dc/terms/" xsi:schemaLocation="http://www.loc.gov/mods/v3 http://www.loc.gov/standards/mods/v3/mods-3-6.xsd">
+        <extension>
+          <flvc:flvc>
+            <flvc:owningInstitution>FGCU</flvc:owningInstitution>
+            <flvc:submittingInstitution>FGCU</flvc:submittingInstitution>
+          </flvc:flvc>
+        </extension>
+        <titleInfo>
+          <title>Inmate Number __________</title>
+          <subTitle>An Ethnography</subTitle>
+        </titleInfo>
+        <identifier type="IID">fgcu_fade_0006</identifier>
+        <name type="personal">
+          <namePart>Race: White | Gender: Female | Sexual Orientation: Gay</namePart>
+          <namePart type="date">1994</namePart>
+        </name>
+        <typeOfResource>text</typeOfResource>
+        <originInfo>
+          <dateIssued encoding="w3cdtf">2016-04-29</dateIssued>
+          <dateCreated encoding="w3cdtf">2016-04-29</dateCreated>
+          <issuance>single unit</issuance>
+        </originInfo>
+        <language>
+          <languageTerm type="text" authority="iso639-2b">English</languageTerm>
+          <languageTerm type="code" authority="iso639-2b">eng</languageTerm>
+        </language>
+        <physicalDescription>
+          <extent>Transcript; 12 pgs.</extent>
+        </physicalDescription>
+        <abstract displayLabel="Summary">This is an interview taken with a survivor of sexual violence on April 29, 2016 by Megan Emily Shindler and Victoria Blair as part of the S(he) Will Fade project. This is a content warning for readers who are sensitive to content which deals directly with instances of rape and drug abuse.</abstract>
+        <subject authority="lcsh">
+          <topic>Sexual violence</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>Rape</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>Drug Abuse</topic>
+        </subject>
+        <subject authority="lcsh">
+          <topic>LGBTQ people</topic>
+        </subject>
+        <accessCondition type="useAndReproduction">This publication is licensed under a Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License. Permitted exceptions include translations, and commercial ticket sales to performances and fundraising.</accessCondition>
+        <location displayLabel="purl">
+          <url>http://purl.flvc.org/fgcu/fd/fgcu_fade_0006</url>
+        </location>
+        <accessCondition type="use and reproduction" displayLabel="RightsStatements.org">http://rightsstatements.org/vocab/InC-EDU/1.0/</accessCondition>
+        <accessCondition type="use and reproduction" displayLabel="Creative Commons">http://creativecommons.org/licenses/by-nc-nd/4.0/</accessCondition>
+      </mods:mods>
+    </metadata>
+  </record>
+</oai>

@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:dpSobek:FI18052510_00001</identifier>
+      <datestamp>2018-09-06</datestamp>
+      <setSpec>oai:dpSobek:bml</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/  http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+        <dc:title>Historic Home - 284 NE 96 St. Interior View</dc:title>
+        <dc:coverage>Miami Shores (Fla.)</dc:coverage>
+        <dc:description>Built 1926 Shoreland Co. designated historic place in national registry interior view ceiling beams</dc:description>
+        <dc:description>(Funding)  This project has been funded under the provisions of the Library Cooperative Grant program, administered by the Florida Department of State&#x2019;s Division of Library and Information Services.</dc:description>
+        <dc:subject>Residences</dc:subject>
+        <dc:subject>Houses</dc:subject>
+        <dc:subject>Landmarks</dc:subject>
+        <dc:subject>Historic houses</dc:subject>
+        <dc:type>still image</dc:type>
+        <dc:rights>http://rightsstatements.org/vocab/UND/1.0/</dc:rights>
+        <dc:rights>Copyright Undetermined</dc:rights>
+        <dc:identifier>http://dpanther.fiu.edu/dpService/dpPurlService/purl/FI18052510/00001</dc:identifier>
+        <dc:identifier.thumbnail>http://dpanther.fiu.edu/sobek/content/FI/18/05/25/10/00001/FI18052510thm.jpg</dc:identifier.thumbnail>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</oai>

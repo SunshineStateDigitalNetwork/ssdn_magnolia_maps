@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:dpSobek:FI14103387_00001</identifier>
+      <datestamp>2020-01-08</datestamp>
+      <setSpec>oai:dpSobek:hco</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/  http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+        <dc:title>Interview between William Luers and Lenka Kabrhelov&#xE1;</dc:title>
+        <dc:title>Havel Conversations: Demonstrating the Power of Words</dc:title>
+        <dc:title>A Man of the Theatre, Unique Soul</dc:title>
+        <dc:creator>The Vaclav Havel Library Foundation</dc:creator>
+        <dc:date>2017</dc:date>
+        <dc:description>(Biographical)  William Henry Luers was born on May 15, 1929. He served as American ambassador to Czechoslovakia between 1983 and 1986. In his role as ambassador, Luers hosted a range of American artists and writers in the Czechoslovak capital, in a bid to &#x201C;change the vision&#x201D; of American power from that of a military to a cultural force. Through such cultural diplomacy, Luers made contact and struck up friendships with prominent Czechoslovak dissidents, including V&#xE1;clav Havel. Luers witnessed Havel&#x2019;s transition from dissident to president first-hand and, later, hosted V&#xE1;clav Havel in New York City on his first visit in office. Luers has also served as American Ambassador to Venezuela, and as a diplomat in the former Soviet Union. Today, he teaches at Columbia University&#x2019;s School of International and Public Affairs. Luers refers to Havel as a &#x201C;unique soul&#x201D; and &#x201C;probably the most powerful legacy that the Czech people [will] ever have.&#x201D;</dc:description>
+        <dc:format>01:07:22:03</dc:format>
+        <dc:identifier>FI14103387</dc:identifier>
+        <dc:language>English</dc:language>
+        <dc:subject>Havel, Va&#x301;clav ( lcsh )</dc:subject>
+        <dc:subject>Diplomacy and foreign relations ( lcsh )</dc:subject>
+        <dc:subject>Charta 77 ( lcsh )</dc:subject>
+        <dc:type>moving image</dc:type>
+        <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
+        <dc:rights>In copyright</dc:rights>
+        <dc:identifier>http://dpanther.fiu.edu/dpService/dpPurlService/purl/FI14103387/00001</dc:identifier>
+        <dc:identifier.thumbnail>http://dpanther.fiu.edu/sobek/content/FI/14/10/33/87/00001/FI14103387_thm.jpg</dc:identifier.thumbnail>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</oai>

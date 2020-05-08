@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:digitalcommons.fiu.edu:laccopsd-1010</identifier>
+      <datestamp>2006-10-09T18:44:35Z</datestamp>
+      <setSpec>publication:laccopsd</setSpec>
+      <setSpec>publication:laccp</setSpec>
+      <setSpec>publication:sipa</setSpec>
+      <setSpec>publication:harvest</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.bepress.com/OAI/2.0/qualified-dublin-core/ https://resources.bepress.com/assets/xsd/oai_qualified_dc.xsd">
+        <dc:title>The Latin American Perspective in Dade County Schools: An Initial Curricular and Teacher Survey (Dialogue #65)</dc:title>
+        <dc:creator>Farrell, Robert V.</dc:creator>
+        <dc:date.created>1986-03-01T08:00:00Z</dc:date.created>
+        <dc:type>Occasional Paper</dc:type>
+        <dc:rights>default</dc:rights>
+        <dc:description.abstract>&lt;p&gt;This paper analyzes the knowledge about Latin America that is
+present in the newly required 9th grade World History Course in Dade County Public Schools. Nine recommended World History textbooks are examined in terms of their Latin American content. Also, the results of a survey questionnaire dealing with knowledge and perceptions of Latin America, which was distributed to various World History and general teachers,
+are discussed. The findings of this research effort while tentative, seem to indicate that there is a definite need to upgrade the Latin American knowledge base both in textbook content and among teachers. Few of the texts are considered adequate in their treatment of Latin America. Some, especially those for below average readers, present a slanted, even distorted picture of Latin American reality. While World History teachers appear to be more knowledgeable about Latin America than teachers in general, lack of knowledge and stereotyping are clearly manifested in certain persisting
+beliefs about the region.&lt;/p&gt;
+
+&lt;p&gt;While this is a narrow research effort, it explores the intriguing notion that what is often considered legitimate knowledge in our classrooms can in fact be quite inadequate. The concluding section of the paper focuses on whether academic excellence is possible when there are distortions and lacunae in our classroom knowledge base.&lt;/p&gt;
+</dc:description.abstract>
+        <dc:identifier>FIDC002683</dc:identifier>
+        <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>
+        <dc:identifier>https://digitalcommons.fiu.edu/laccopsd/11</dc:identifier>
+        <dc:publisher>Florida International University</dc:publisher>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</oai>

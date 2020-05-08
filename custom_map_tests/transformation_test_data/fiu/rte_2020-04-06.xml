@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:dpSobek:FI12090331_00001</identifier>
+      <datestamp>2017-09-25</datestamp>
+      <setSpec>oai:dpSobek:rte</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/  http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+        <dc:title>Water Budget Analysis for the Everglades Nutrient Removal Project, and Stormwater Treatment Area 1 West  (August 20, 1998 to August 30, 2000)</dc:title>
+        <dc:title>Everglades Nutrient Removal Project</dc:title>
+        <dc:creator>South Florida Water Management District (Fla.)</dc:creator>
+        <dc:creator>Abtew, Wossenu</dc:creator>
+        <dc:creator>Raymond, John H.</dc:creator>
+        <dc:creator>Imru, Muluneh</dc:creator>
+        <dc:date>2000-12</dc:date>
+        <dc:description>(Bibliography)  Includes bibliographical references (page 41)</dc:description>
+        <dc:description>(Statement of Responsibility)  produced by Hydro Information Systems &amp; Assessment Department, Environmental Monitoring &amp; Assessment Division, South Florida Water Management District</dc:description>
+        <dc:description>"December 2000"</dc:description>
+        <dc:description>TECHNICAL PUBLICATION EMA #388</dc:description>
+        <dc:description>EXECUTIVE SUMMARY</dc:description>
+        <dc:format>vii, 63 pages. : ill. ;</dc:format>
+        <dc:identifier>FI12090331</dc:identifier>
+        <dc:identifier>(OCoLC)36806182</dc:identifier>
+        <dc:language>English</dc:language>
+        <dc:coverage>Florida</dc:coverage>
+        <dc:coverage>Everglades</dc:coverage>
+        <dc:coverage>Everglades Nutrient Removal Project</dc:coverage>
+        <dc:subject>Water -- Purification -- Phosphorus removal ( lcsh )</dc:subject>
+        <dc:subject>Hydrological forecasting ( lcsh )</dc:subject>
+        <dc:subject>Restoration ecology ( lcsh )</dc:subject>
+        <dc:publisher>SFWMD ( West Palm Beach, FL )</dc:publisher>
+        <dc:publisher>SFWMD ( West Palm Beach, FL )</dc:publisher>
+        <dc:type>text</dc:type>
+        <dc:rights>Please contact the owning institution for licensing and permissions. It is the users responsibility to ensure use does not violate any third party rights.</dc:rights>
+        <dc:identifier>http://dpanther.fiu.edu/dpService/dpPurlService/purl/FI12090331/00001</dc:identifier>
+        <dc:identifier.thumbnail>http://dpanther.fiu.edu/sobek/content/FI/12/09/03/31/00001/FI12090331thm.jpg</dc:identifier.thumbnail>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</oai>
