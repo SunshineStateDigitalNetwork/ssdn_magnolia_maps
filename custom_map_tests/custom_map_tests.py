@@ -31,7 +31,7 @@ test_dir_path = os.path.abspath(os.path.dirname(__file__))
 """    
 
 
-class CustomMapTestCase(unittest.TestCase):
+class FSUCustomMapTestCase(unittest.TestCase):
 
     def setUp(self):
         with open(os.path.join(test_dir_path, 'transformation_test_data/transformation_verification.json')) as fp:
@@ -41,8 +41,8 @@ class CustomMapTestCase(unittest.TestCase):
                                 'Provider': 'Sunshine State Digital Network',
                                 'CustomMapPath': os.path.split(test_dir_path)[0]}}
                                                             
-    #def tearDown(self):
-    #    os.remove(Path(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')))
+    def tearDown(self):
+        os.remove(Path(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')))
     
     def test_fsu_mods_custom_map(self):
         transformation_info = {'Map': 'fsu_mods_map',
@@ -53,7 +53,102 @@ class CustomMapTestCase(unittest.TestCase):
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[13])
-        #test_data = json.load(os.path)
+        
+        
+class FBCTLHCustomMapTestCase(unittest.TestCase):
+
+    def setUp(self):
+        with open(os.path.join(test_dir_path, 'transformation_test_data/transformation_verification.json')) as fp:
+            self.data = [json.loads(line) for line in fp]
+        self.config = {'ssdn': {'InFilePath': os.path.join(test_dir_path, 'transformation_test_data'),
+                                'OutFilePath': os.path.join(test_dir_path, 'transformation_test_data'),
+                                'Provider': 'Sunshine State Digital Network',
+                                'CustomMapPath': os.path.split(test_dir_path)[0]}}
+                                                            
+    def tearDown(self):
+        os.remove(Path(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')))
+        
+    def test_fbctlh_mods_custom_map(self):
+        transformation_info = {'Map': 'fsu_mods_map',
+                               'DataProvider': 'First Baptist Church of Tallahassee',
+                               'IntermediateProvider': 'Florida State University Libraries',
+                               'Scenario': 'SSDNMODS'}
+        transform(self.config, transformation_info, 'fbctlh', verbosity=1)
+        with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
+            test_data = json.load(fp)
+        self.assertEqual(test_data, self.data[9])
+        
+        
+class LeonHighCustomMapTestCase(unittest.TestCase):
+
+    def setUp(self):
+        with open(os.path.join(test_dir_path, 'transformation_test_data/transformation_verification.json')) as fp:
+            self.data = [json.loads(line) for line in fp]
+        self.config = {'ssdn': {'InFilePath': os.path.join(test_dir_path, 'transformation_test_data'),
+                                'OutFilePath': os.path.join(test_dir_path, 'transformation_test_data'),
+                                'Provider': 'Sunshine State Digital Network',
+                                'CustomMapPath': os.path.split(test_dir_path)[0]}}
+                                                            
+    def tearDown(self):
+        os.remove(Path(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')))
+        
+    def test_fbctlh_mods_custom_map(self):
+        transformation_info = {'Map': 'fsu_mods_map',
+                               'DataProvider': 'First Baptist Church of Tallahassee',
+                               'IntermediateProvider': 'Florida State University Libraries',
+                               'Scenario': 'SSDNMODS'}
+        transform(self.config, transformation_info, 'leon', verbosity=1)
+        with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
+            test_data = json.load(fp)
+        self.assertEqual(test_data, self.data[12])        
+        
+        
+class GodbyHighCustomMapTestCase(unittest.TestCase):
+
+    def setUp(self):
+        with open(os.path.join(test_dir_path, 'transformation_test_data/transformation_verification.json')) as fp:
+            self.data = [json.loads(line) for line in fp]
+        self.config = {'ssdn': {'InFilePath': os.path.join(test_dir_path, 'transformation_test_data'),
+                                'OutFilePath': os.path.join(test_dir_path, 'transformation_test_data'),
+                                'Provider': 'Sunshine State Digital Network',
+                                'CustomMapPath': os.path.split(test_dir_path)[0]}}
+                                                            
+    def tearDown(self):
+        os.remove(Path(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')))
+        
+    def test_fbctlh_mods_custom_map(self):
+        transformation_info = {'Map': 'fsu_mods_map',
+                               'DataProvider': 'First Baptist Church of Tallahassee',
+                               'IntermediateProvider': 'Florida State University Libraries',
+                               'Scenario': 'SSDNMODS'}
+        transform(self.config, transformation_info, 'godby', verbosity=1)
+        with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
+            test_data = json.load(fp)
+        self.assertEqual(test_data, self.data[10])   
+
+
+class HavanaHHSCustomMapTestCase(unittest.TestCase):
+
+    def setUp(self):
+        with open(os.path.join(test_dir_path, 'transformation_test_data/transformation_verification.json')) as fp:
+            self.data = [json.loads(line) for line in fp]
+        self.config = {'ssdn': {'InFilePath': os.path.join(test_dir_path, 'transformation_test_data'),
+                                'OutFilePath': os.path.join(test_dir_path, 'transformation_test_data'),
+                                'Provider': 'Sunshine State Digital Network',
+                                'CustomMapPath': os.path.split(test_dir_path)[0]}}
+                                                            
+    def tearDown(self):
+        os.remove(Path(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')))
+        
+    def test_fbctlh_mods_custom_map(self):
+        transformation_info = {'Map': 'fsu_mods_map',
+                               'DataProvider': 'First Baptist Church of Tallahassee',
+                               'IntermediateProvider': 'Florida State University Libraries',
+                               'Scenario': 'SSDNMODS'}
+        transform(self.config, transformation_info, 'havana', verbosity=1)
+        with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
+            test_data = json.load(fp)
+        self.assertEqual(test_data, self.data[11])        
         
 
 if __name__ == '__main__':
