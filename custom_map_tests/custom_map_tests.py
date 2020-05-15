@@ -297,5 +297,81 @@ class IR_FIUCustomMapTestCase(unittest.TestCase):
 """
 
 
+class BrowardCustomMapTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self = stand_up(self)
+
+    def tearDown(self):
+        clean()
+    
+    def test_broward_mods_custom_map(self):
+        transformation_info = {'Map': 'ssdn_mods_map',
+                               'DataProvider': 'Broward College Archives & Special Collections',
+                               'IntermediateProvider': None,
+                               'Scenario': 'SSDNMODS'}
+        transform(self.config, transformation_info, 'broward', verbosity=1)
+        with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
+            test_data = json.load(fp)
+        self.assertEqual(test_data, self.data[2])
+        
+      
+class FAUCustomMapTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self = stand_up(self)
+
+    def tearDown(self):
+        clean()
+    
+    def test_fau_mods_custom_map(self):
+        transformation_info = {'Map': 'ssdn_mods_map',
+                               'DataProvider': 'Florida Atlantic University',
+                               'IntermediateProvider': None,
+                               'Scenario': 'SSDNMODS'}
+        transform(self.config, transformation_info, 'fau', verbosity=1)
+        with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
+            test_data = json.load(fp)
+        self.assertEqual(test_data, self.data[4])        
+        
+
+class FGCUCustomMapTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self = stand_up(self)
+
+    def tearDown(self):
+        clean()
+    
+    def test_fgcu_mods_custom_map(self):
+        transformation_info = {'Map': 'ssdn_mods_map',
+                               'DataProvider': 'Florida Gulf Coast University Library',
+                               'IntermediateProvider': None,
+                               'Scenario': 'SSDNMODS'}
+        transform(self.config, transformation_info, 'fgcu', verbosity=1)
+        with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
+            test_data = json.load(fp)
+        self.assertEqual(test_data, self.data[5])         
+
+ 
+class FSCJCustomMapTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self = stand_up(self)
+
+    def tearDown(self):
+        clean()
+    
+    def test_fscj_mods_custom_map(self):
+        transformation_info = {'Map': 'ssdn_mods_map',
+                               'DataProvider': 'Florida State College at Jacksonville',
+                               'IntermediateProvider': None,
+                               'Scenario': 'SSDNMODS'}
+        transform(self.config, transformation_info, 'fscj', verbosity=1)
+        with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
+            test_data = json.load(fp)
+        self.assertEqual(test_data, self.data[8])        
+
+
 if __name__ == '__main__':
     unittest.main()
