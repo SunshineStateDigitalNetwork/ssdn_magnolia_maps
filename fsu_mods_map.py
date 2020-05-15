@@ -8,15 +8,14 @@ leon_high = re.compile('^FSU_LeonHigh')
 godby_high = re.compile('^FSU_Godby')
 havana_hhs = re.compile('^FSU_HHHS')
 
+
 def fsu_mods_map(rec):
     sr = SourceResource()
     sr.alternative = rec.alternative
+
+    # Archival collection info
     if rec.collection:
-        #sr.collection = {'_:id': rec.collection.url, 
-        #                 'host': rec.collection.location,
-        #                 'name': rec.collection.title}
         coll_info = dict()
-        #sr.collection = {}
         if rec.collection.url:
             coll_info['_:id'] = rec.collection.url
         if rec.collection.location:
@@ -24,37 +23,6 @@ def fsu_mods_map(rec):
         if rec.collection.title:
             coll_info['name'] = rec.collection.title
         sr.collection = coll_info
-        
-    #print(dir(sr.collection))
-    #sr.collection = {}
-    #sr.collection = dict()
-    #coll_info = {'_:id': rec.collection.url, 
-    #             'host': rec.collection.location,
-    #             'name': rec.collection.title}
-    #print('coll_info:', coll_info)
-    #for k, v in coll_info.items():
-    #    if v:
-    #        sr.collection.update(k, v)
-    #print('url:', rec.collection.url)
-    #try:
-    #    if rec.collection.url:
-    #        sr.collection['_:id'] = rec.collection.url
-    #except AttributeError:
-    #    pass
-    #print('location:', rec.collection.location)
-    #try:
-    #    if rec.collection.location:
-    #        sr.collection['host'] = rec.collection.location
-    #except AttributeError:
-    #    pass
-    #print('title:', rec.collection.title)
-    #try:
-    #    if rec.collection.title:
-    #        sr.collection['name'] = rec.collection.title
-    #except AttributeError:
-    #    pass
-    #print('sr:',sr.collection)
-                
 
     sr.contributor = rec.contributor
     sr.creator = rec.creator
@@ -67,7 +35,7 @@ def fsu_mods_map(rec):
     except IndexError:
         pass
     sr.language = rec.language
-    sr.place = rec.place
+    sr.spatial = rec.place
     sr.publisher = rec.publisher
     try:
         if rec.rights.startswith('http:'):
@@ -111,7 +79,5 @@ def fsu_mods_map(rec):
     else:
         data_provider = 'Florida State University Libraries'
         intermediate_provider = None
-    
-    
     
     return sr, tn, data_provider, intermediate_provider
