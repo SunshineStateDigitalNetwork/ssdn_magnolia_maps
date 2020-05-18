@@ -1,0 +1,64 @@
+{
+  "responseHeader": {
+    "status": 0,
+    "QTime": 192,
+    "params": {
+      "query": "collection:statelibraryandarchivesofflorida",
+      "qin": "collection:statelibraryandarchivesofflorida",
+      "fields": "avg_rating,backup_location,btih,call_number,collection,contributor,coverage,creator,date,description,downloads,external-identifier,foldoutcount,format,genre,headerImage,identifier,imagecount,indexflag,item_size,language,licenseurl,mediatype,members,month,name,noindex,num_reviews,oai_updatedate,publicdate,publisher,related-external-id,reviewdate,rights,scanningcentre,source,stripped_tags,subject,title,type,volume,week,year",
+      "wt": "json",
+      "rows": "100",
+      "start": 0
+    }
+  },
+  "response": {
+    "numFound": 1587,
+    "start": 0,
+    "docs": [
+      {
+        "btih": "2d2e6cf568c87c2b274b93f0e6ccc75a82647d4e",
+        "collection": [
+          "statelibraryandarchivesofflorida"
+        ],
+        "contributor": "State Library and Archives of Florida",
+        "creator": "Florida. State Road Department",
+        "date": "1925-02-01T00:00:00Z",
+        "description": "                                                 ",
+        "downloads": 3,
+        "format": [
+          "Abbyy GZ",
+          "Archive BitTorrent",
+          "DjVuTXT",
+          "Djvu XML",
+          "Item Tile",
+          "Metadata",
+          "Scandata",
+          "Single Page Processed JP2 ZIP",
+          "Text PDF"
+        ],
+        "identifier": "FloridaHighways02-1925",
+        "indexflag": [
+          "index",
+          "nonoindex"
+        ],
+        "item_size": 81260243,
+        "language": "English",
+        "mediatype": "texts",
+        "month": 0,
+        "oai_updatedate": [
+          "2019-08-29T16:04:26Z",
+          "2019-08-29T16:04:26Z",
+          "2019-09-25T19:23:49Z"
+        ],
+        "publicdate": "2019-08-29T16:04:26Z",
+        "subject": [
+          "Transportation--Florida--Periodicals.",
+          "Roads--Florida--Periodicals."
+        ],
+        "title": "Florida Highways, February 1925",
+        "week": 0,
+        "year": "1925"
+      }
+    ]
+  }
+}

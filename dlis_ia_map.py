@@ -46,4 +46,8 @@ def dlis_ia_map(rec):
         pass
     if rec.title:
         sr.title = rec.title
-    return sr
+        
+    # thumbnail
+    tn = 'https://archive.org/services/img/{}'.format(rec.identifier)
+    
+    yield sr, tn

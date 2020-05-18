@@ -39,4 +39,4 @@ def fiu_dc_map(rec):
     if rec.thumbnail:
         tn = rec.thumbnail
     
-    return sr, tn
+    yield sr, tn

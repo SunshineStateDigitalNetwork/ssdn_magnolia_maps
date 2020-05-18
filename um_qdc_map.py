@@ -13,6 +13,9 @@ for type in IANA_parsed.find_all('file'):
 
 
 def um_qdc_map(rec):
+    if rec.requires:
+        if 'noharvest' in rec.requires:
+            return None
     sr = SourceResource()
     sr.contributor = rec.contributor
     sr.creator = rec.creator
@@ -55,5 +58,5 @@ def um_qdc_map(rec):
     cdm_tn_path = f'/utils/getthumbnail/collection/{collection_list[1]}/id/{collection_list[3]}'
     tn = prefix + cdm_tn_path
     
-    return sr, tn
+    yield sr, tn
     

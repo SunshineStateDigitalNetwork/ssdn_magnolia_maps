@@ -80,4 +80,4 @@ def fsu_mods_map(rec):
         data_provider = 'Florida State University Libraries'
         intermediate_provider = None
     
-    return sr, tn, data_provider, intermediate_provider
+    yield sr, tn, data_provider, intermediate_provider
