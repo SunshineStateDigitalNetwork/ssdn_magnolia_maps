@@ -1,6 +1,7 @@
 import re
 
 from citrus import SourceResource, SourceResourceRequiredElementException
+
 from assets import tgn_cache
 
 first_baptist = re.compile('^FSU_FBCTLH')
@@ -47,9 +48,9 @@ def fsu_mods_map(rec):
     try:
         attribution = "This record contains information from Thesaurus of Geographic Names (TGN) which is made available under the ODC Attribution License."
         geo_data_list = [tgn_cache(geo_code) for geo_code in rec.geographic_code]
-        sr.spatial = [{'lat': lat, 
-                       'long': long, 
-                       'name': label, 
+        sr.spatial = [{'lat': lat,
+                       'long': long,
+                       'name': label,
                        '_:attribution': attribution}
                       for _, lat, long, label in geo_data_list]
     except TypeError:
@@ -58,7 +59,7 @@ def fsu_mods_map(rec):
     sr.title = [rec.title]
     sr.type = rec.type
     tn = f'https://fsu.digital.flvc.org/islandora/object/{rec.pid}/datastream/TN/view'
-    
+
     # check if not in default data_provider scope
     first_baptist_iid = first_baptist.search(rec.iid)
     leon_high_iid = leon_high.search(rec.iid)
@@ -69,7 +70,7 @@ def fsu_mods_map(rec):
         intermediate_provider = 'Florida State University Libraries'
     elif leon_high_iid:
         data_provider = 'Leon High School, Tallahassee, Florida'
-        intermediate_provider = 'Florida State University Libraries'   
+        intermediate_provider = 'Florida State University Libraries'
     elif godby_high_iid:
         data_provider = 'Godby High School, Tallahassee, Florida'
         intermediate_provider = 'Florida State University Libraries'
@@ -79,5 +80,5 @@ def fsu_mods_map(rec):
     else:
         data_provider = 'Florida State University Libraries'
         intermediate_provider = None
-    
+
     yield sr, tn, data_provider, intermediate_provider

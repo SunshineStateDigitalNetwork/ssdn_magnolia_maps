@@ -1,11 +1,11 @@
+import json
 import os
 import unittest
-import json
 from datetime import date
 from pathlib import Path
-from citrus.cli import transform
 from unittest.mock import patch, MagicMock
-from citrus import scenarios
+
+from citrus.cli import transform
 
 test_dir_path = os.path.abspath(os.path.dirname(__file__))
 
@@ -20,11 +20,6 @@ def stand_up(self):
 
 def clean():
     os.remove(Path(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')))
-
-"""
-16 = Miami-Dade Public Library System
-18 = University of South Florida Libraries
-"""    
 
 
 class FSUCustomMapTestCase(unittest.TestCase):
@@ -225,7 +220,7 @@ class GNMHSCustomMapTestCase(unittest.TestCase):
     def tearDown(self):
         clean()
 
-    def test_boynton_dc_custom_map(self):
+    def test_gnmhs_dc_custom_map(self):
         transformation_info = {'Map': 'fiu_dc_map',
                                'DataProvider': 'Greater North Miami Historical Society',
                                'IntermediateProvider': 'Florida International University Libraries',
@@ -282,12 +277,12 @@ class IR_FIUCustomMapTestCase(unittest.TestCase):
     def tearDown(self):
         clean()
     
-    def test_fsu_mods_custom_map(self):
+    def test_ir_fiu_dc_custom_map(self):
         transformation_info = {'Map': '',
                                'DataProvider': 'Florida International University Libraries',
                                'IntermediateProvider': None,
                                'Scenario': ''}
-        transform(self.config, transformation_info, 'fsu', verbosity=1)
+        transform(self.config, transformation_info, 'ir_fiu', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[])        
@@ -397,6 +392,44 @@ class InternetArchiveCustomMapTestCase(unittest.TestCase):
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[20])        
+        
+      
+class MDPLCustomMapTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self = stand_up(self)
+
+    def tearDown(self):
+        clean()
+
+    def test_mdpl_qdc_custom_map(self):
+        transformation_info = {'Map': 'ssdn_qdc_map',
+                               'DataProvider': 'Miami-Dade Public Library System',
+                               'IntermediateProvider': None,
+                               'Scenario': 'SSDNQDC'}
+        transform(self.config, transformation_info, 'mdpl', verbosity=1)
+        with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
+            test_data = json.load(fp)
+        self.assertEqual(test_data, self.data[16])        
+
+
+class USFCustomMapTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self = stand_up(self)
+
+    def tearDown(self):
+        clean()
+
+    def test_usf_dc_custom_map(self):
+        transformation_info = {'Map': 'ssdn_dc_map',
+                               'DataProvider': 'University of South Florida Libraries',
+                               'IntermediateProvider': None,
+                               'Scenario': 'SSDNDC'}
+        transform(self.config, transformation_info, 'usf', verbosity=1)
+        with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
+            test_data = json.load(fp)
+        self.assertEqual(test_data, self.data[18])
 
 
 if __name__ == '__main__':

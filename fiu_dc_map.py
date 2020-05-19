@@ -1,13 +1,17 @@
-from citrus import SourceResource, SourceResourceRequiredElementException
+from citrus import SourceResource
 
 
 def fiu_dc_map(rec):
     sr = SourceResource()
-    sr.contributor = rec.contributor
-    sr.creator = rec.creator
+    if rec.contributor:
+        sr.contributor = [{'name': contributor} for contributor in
+                          rec.contributor]
+    if rec.creator:
+        sr.creator = [{'name': creator} for creator in
+                      rec.creator]
     try:
-        sr.date = {'begin': rec.date[0], 
-                   'end': rec.date[0], 
+        sr.date = {'begin': rec.date[0],
+                   'end': rec.date[0],
                    'displayDate': rec.date[0]}
     except TypeError:
         pass
@@ -20,23 +24,24 @@ def fiu_dc_map(rec):
         sr.language = [{'name': lang} for lang in rec.language]
     except TypeError:
         pass
-    sr.spatial = rec.place
+    if rec.place:
+        sr.spatial = [{'name': place} for place in rec.place]
     sr.publisher = rec.publisher
-    #print(rec.rights)
     if len(rec.rights) > 1:
         for r in rec.rights:
             if r.startswith('http'):
                 sr.rights = [{'@id': r}]
     else:
         if rec.rights[0].startswith('http'):
-                sr.rights = [{'@id': rec.rights[0]}]
-        else:        
+            sr.rights = [{'@id': rec.rights[0]}]
+        else:
             sr.rights = [{'text': rec.rights[0]}]
-    sr.subject = rec.subject
+    if rec.subject:
+        sr.subject = [{'name': subject} for subject in rec.subject]
     sr.title = rec.title
     sr.type = rec.type
-    
+
     if rec.thumbnail:
         tn = rec.thumbnail
-    
+
     yield sr, tn

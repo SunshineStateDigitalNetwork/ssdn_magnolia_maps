@@ -1,20 +1,7 @@
-import requests
-from bs4 import BeautifulSoup
-
 from citrus import SourceResource
 
-IANA_type_list = []
 
-IANA_XML = requests.get('http://www.iana.org/assignments/media-types/media-types.xml')
-IANA_parsed = BeautifulSoup(IANA_XML.text, "lxml")
-for type in IANA_parsed.find_all('file'):
-    IANA_type_list.append(type.text)
-
-
-def um_qdc_map(rec):
-    if rec.requires:
-        if 'noharvest' in rec.requires:
-            return None
+def ssdn_dc_map(rec):
     sr = SourceResource()
     if rec.contributor:
         sr.contributor = [{'name': contributor} for contributor in
@@ -29,13 +16,14 @@ def um_qdc_map(rec):
     except TypeError:
         pass
     sr.description = rec.description
-    sr.genre = [{'name': genre}
-                for genre in rec.format
-                if genre.lower() not in IANA_type_list]
+    sr.format = rec.format
     for identifier in rec.identifier:
-        if 'merrick.library.miami.edu' in identifier:
+        if identifier.startswith('http'):
             sr.identifier = identifier
-    sr.language = rec.language
+    try:
+        sr.language = [{'name': lang} for lang in rec.language]
+    except TypeError:
+        pass
     if rec.place:
         sr.spatial = [{'name': place} for place in rec.place]
     sr.publisher = rec.publisher
@@ -52,15 +40,8 @@ def um_qdc_map(rec):
         sr.subject = [{'name': subject} for subject in rec.subject]
     sr.title = rec.title
     sr.type = rec.type
-    sr.alternative = rec.alternative
-    sr.abstract = rec.abstract
-    sr.collection = {'host': rec.is_part_of[0], 'name': rec.is_part_of[1]}
-    sr.extent = rec.extent
 
-    # thumbnail
-    prefix = 'http://merrick.library.miami.edu'
-    collection_list = identifier.split('/')[-4:]
-    cdm_tn_path = f'/utils/getthumbnail/collection/{collection_list[1]}/id/{collection_list[3]}'
-    tn = prefix + cdm_tn_path
+    if rec.thumbnail:
+        tn = rec.thumbnail
 
     yield sr, tn
