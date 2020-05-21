@@ -1,7 +1,7 @@
 from citrus import SourceResource
 
 
-def ssdn_dc_map(rec):
+def ssdn_dc_bepress_map(rec):
     sr = SourceResource()
     if rec.contributor:
         sr.contributor = [{'name': contributor} for contributor in
@@ -10,9 +10,9 @@ def ssdn_dc_map(rec):
         sr.creator = [{'name': creator} for creator in
                       rec.creator]
     try:
-        sr.date = {'begin': rec.date[0],
-                   'end': rec.date[0],
-                   'displayDate': rec.date[0]}
+        sr.date = {'begin': rec.date,
+                   'end': rec.date,
+                   'displayDate': rec.date}
     except TypeError:
         pass
     sr.description = rec.description
@@ -42,7 +42,6 @@ def ssdn_dc_map(rec):
     sr.type = rec.type
 
     # thumbnail
-    if rec.thumbnail:
-        tn = rec.thumbnail
+    tn = None
 
     yield sr, tn

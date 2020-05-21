@@ -39,6 +39,8 @@ def ssdn_mods_map(rec):
     sr.subject = rec.subject
     sr.title = [rec.title]
     sr.type = rec.type
+    
+    # thumbnail
     tn = f'https://{rec.harvest_id.split(":")[1]}/islandora/object/{rec.pid}/datastream/TN/view'
 
     yield sr, tn

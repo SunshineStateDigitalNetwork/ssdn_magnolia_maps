@@ -58,6 +58,8 @@ def fsu_mods_map(rec):
     sr.subject = rec.subject
     sr.title = [rec.title]
     sr.type = rec.type
+    
+    # thumbnail
     tn = f'https://fsu.digital.flvc.org/islandora/object/{rec.pid}/datastream/TN/view'
 
     # check if not in default data_provider scope

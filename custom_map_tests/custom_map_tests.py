@@ -10,6 +10,10 @@ from citrus.cli import transform
 test_dir_path = os.path.abspath(os.path.dirname(__file__))
 
 def stand_up(self):
+    """
+    Open and load verification data
+    init local test config
+    """
     with open(os.path.join(test_dir_path, 'transformation_test_data/transformation_verification.json')) as fp:
         self.data = [json.loads(line) for line in fp]
     self.config = {'ssdn': {'InFilePath': os.path.join(test_dir_path, 'transformation_test_data'),
@@ -19,6 +23,9 @@ def stand_up(self):
     return self
 
 def clean():
+    """
+    Remove docs built for tests
+    """
     os.remove(Path(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')))
 
 
@@ -268,7 +275,7 @@ class UMCustomMapTestCase(unittest.TestCase):
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[17])
         
-"""        
+        
 class IR_FIUCustomMapTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -278,15 +285,15 @@ class IR_FIUCustomMapTestCase(unittest.TestCase):
         clean()
     
     def test_ir_fiu_dc_custom_map(self):
-        transformation_info = {'Map': '',
+        transformation_info = {'Map': 'ssdn_dc_bepress_map',
                                'DataProvider': 'Florida International University Libraries',
                                'IntermediateProvider': None,
-                               'Scenario': ''}
+                               'Scenario': 'BepressDC'}
         transform(self.config, transformation_info, 'ir_fiu', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
-        self.assertEqual(test_data, self.data[])        
-"""
+        self.assertEqual(test_data, self.data[15])        
+
 
 class BrowardCustomMapTestCase(unittest.TestCase):
 

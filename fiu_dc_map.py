@@ -41,6 +41,7 @@ def fiu_dc_map(rec):
     sr.title = rec.title
     sr.type = rec.type
 
+    # thumbnail
     if rec.thumbnail:
         tn = rec.thumbnail
 
