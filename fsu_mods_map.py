@@ -43,7 +43,7 @@ def fsu_mods_map(rec):
             sr.rights = [{'@id': rec.rights}]
         else:
             sr.rights = [{'text': rec.rights}]
-    except SourceResourceRequiredElementException:
+    except (AttributeError, SourceResourceRequiredElementException):
         pass
     try:
         attribution = "This record contains information from Thesaurus of Geographic Names (TGN) which is made available under the ODC Attribution License."
