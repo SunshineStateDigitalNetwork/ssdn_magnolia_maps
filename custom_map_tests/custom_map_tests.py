@@ -42,7 +42,7 @@ class FSUCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Florida State University Libraries',
                                'IntermediateProvider': None,
                                'Scenario': 'SSDNMODS'}
-        transform(self.config, transformation_info, 'fsu', verbosity=1)
+        transform(self.config, transformation_info, 'fsu', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[13])
@@ -61,7 +61,7 @@ class FBCTLHCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'First Baptist Church of Tallahassee',
                                'IntermediateProvider': 'Florida State University Libraries',
                                'Scenario': 'SSDNMODS'}
-        transform(self.config, transformation_info, 'fbctlh', verbosity=1)
+        transform(self.config, transformation_info, 'fbctlh', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[9])
@@ -80,7 +80,7 @@ class LeonHighCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'First Baptist Church of Tallahassee',
                                'IntermediateProvider': 'Florida State University Libraries',
                                'Scenario': 'SSDNMODS'}
-        transform(self.config, transformation_info, 'leon', verbosity=1)
+        transform(self.config, transformation_info, 'leon', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[12])        
@@ -99,7 +99,7 @@ class GodbyHighCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'First Baptist Church of Tallahassee',
                                'IntermediateProvider': 'Florida State University Libraries',
                                'Scenario': 'SSDNMODS'}
-        transform(self.config, transformation_info, 'godby', verbosity=1)
+        transform(self.config, transformation_info, 'godby', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[10])   
@@ -118,7 +118,7 @@ class HavanaHHSCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'First Baptist Church of Tallahassee',
                                'IntermediateProvider': 'Florida State University Libraries',
                                'Scenario': 'SSDNMODS'}
-        transform(self.config, transformation_info, 'havana', verbosity=1)
+        transform(self.config, transformation_info, 'havana', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[11])
@@ -137,7 +137,7 @@ class FIUCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Florida International University Libraries',
                                'IntermediateProvider': None,
                                'Scenario': 'SSDNDC'}
-        transform(self.config, transformation_info, 'fiu', verbosity=1)
+        transform(self.config, transformation_info, 'fiu', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[7])
@@ -156,7 +156,7 @@ class BoyntonBeachCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Boynton Beach City Library Archives',
                                'IntermediateProvider': 'Florida International University Libraries',
                                'Scenario': 'SSDNDC'}
-        transform(self.config, transformation_info, 'boynton', verbosity=1)
+        transform(self.config, transformation_info, 'boynton', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[0])        
@@ -175,7 +175,7 @@ class BrockwayCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Miami Shores Village Archives at Brockway Memorial Library',
                                'IntermediateProvider': 'Florida International University Libraries',
                                'Scenario': 'SSDNDC'}
-        transform(self.config, transformation_info, 'brockway', verbosity=1)
+        transform(self.config, transformation_info, 'brockway', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[1])
@@ -194,7 +194,7 @@ class CoralGablesCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'City of Coral Gables',
                                'IntermediateProvider': 'Florida International University Libraries',
                                'Scenario': 'SSDNDC'}
-        transform(self.config, transformation_info, 'coral_gables', verbosity=1)
+        transform(self.config, transformation_info, 'coral_gables', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[3])
@@ -213,7 +213,7 @@ class MBVMCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Miami Design Preservation League, Closeup Productions',
                                'IntermediateProvider': 'Florida International University Libraries',
                                'Scenario': 'SSDNDC'}
-        transform(self.config, transformation_info, 'mbvm', verbosity=1)
+        transform(self.config, transformation_info, 'mbvm', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[6])
@@ -232,7 +232,7 @@ class GNMHSCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Greater North Miami Historical Society',
                                'IntermediateProvider': 'Florida International University Libraries',
                                'Scenario': 'SSDNDC'}
-        transform(self.config, transformation_info, 'gnmhs', verbosity=1)
+        transform(self.config, transformation_info, 'gnmhs', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[14])
@@ -251,7 +251,7 @@ class VaclavCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Vaclav Havel Library Foundation',
                                'IntermediateProvider': 'Florida International University Libraries',
                                'Scenario': 'SSDNDC'}
-        transform(self.config, transformation_info, 'vhlf', verbosity=1)
+        transform(self.config, transformation_info, 'vhlf', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[19])
@@ -270,7 +270,7 @@ class UMCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'University of Miami Libraries',
                                'IntermediateProvider': None,
                                'Scenario': 'SSDNQDC'}
-        transform(self.config, transformation_info, 'um', verbosity=1)
+        transform(self.config, transformation_info, 'um', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[17])
@@ -289,7 +289,7 @@ class IR_FIUCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Florida International University Libraries',
                                'IntermediateProvider': None,
                                'Scenario': 'BepressDC'}
-        transform(self.config, transformation_info, 'ir_fiu', verbosity=1)
+        transform(self.config, transformation_info, 'ir_fiu', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[15])        
@@ -308,7 +308,7 @@ class BrowardCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Broward College Archives & Special Collections',
                                'IntermediateProvider': None,
                                'Scenario': 'SSDNPartnerMODSScenario'}
-        transform(self.config, transformation_info, 'broward', verbosity=1)
+        transform(self.config, transformation_info, 'broward', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[2])
@@ -327,7 +327,7 @@ class FAUCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Florida Atlantic University',
                                'IntermediateProvider': None,
                                'Scenario': 'SSDNPartnerMODSScenario'}
-        transform(self.config, transformation_info, 'fau', verbosity=1)
+        transform(self.config, transformation_info, 'fau', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[4])        
@@ -346,7 +346,7 @@ class FGCUCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Florida Gulf Coast University Library',
                                'IntermediateProvider': None,
                                'Scenario': 'SSDNPartnerMODSScenario'}
-        transform(self.config, transformation_info, 'fgcu', verbosity=1)
+        transform(self.config, transformation_info, 'fgcu', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[5])         
@@ -365,7 +365,7 @@ class FSCJCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Florida State College at Jacksonville',
                                'IntermediateProvider': None,
                                'Scenario': 'SSDNPartnerMODSScenario'}
-        transform(self.config, transformation_info, 'fscj', verbosity=1)
+        transform(self.config, transformation_info, 'fscj', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[8])        
@@ -395,7 +395,7 @@ class InternetArchiveCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'State Library and Archives of Florida',
                                'IntermediateProvider': None,
                                'Scenario': 'InternetArchive'}
-        transform(self.config, transformation_info, 'statelibraryandarchivesofflorida', verbosity=1)
+        transform(self.config, transformation_info, 'statelibraryandarchivesofflorida', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[20])        
@@ -414,7 +414,7 @@ class MDPLCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'Miami-Dade Public Library System',
                                'IntermediateProvider': None,
                                'Scenario': 'SSDNQDC'}
-        transform(self.config, transformation_info, 'mdpl', verbosity=1)
+        transform(self.config, transformation_info, 'mdpl', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[16])        
@@ -433,7 +433,7 @@ class USFCustomMapTestCase(unittest.TestCase):
                                'DataProvider': 'University of South Florida Libraries',
                                'IntermediateProvider': None,
                                'Scenario': 'SSDNDC'}
-        transform(self.config, transformation_info, 'usf', verbosity=1)
+        transform(self.config, transformation_info, 'usf', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[18])
