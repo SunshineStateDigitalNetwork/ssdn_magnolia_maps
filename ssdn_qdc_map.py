@@ -1,4 +1,10 @@
+import logging
+
 from citrus import SourceResource
+
+logger = logging.getLogger(__name__)
+logger.addHandler(logging.NullHandler())
+logger.debug(f'Loaded {__name__} map')
 
 
 def ssdn_qdc_map(rec):
@@ -14,12 +20,14 @@ def ssdn_qdc_map(rec):
                    'end': rec.date[0],
                    'displayDate': rec.date[0]}
     except TypeError:
+        logger.info(f"No date - {rec.harvest_id}")
         pass
     sr.description = rec.description
     try:
         sr.genre = [{'name': genre}
                     for genre in rec.medium if genre]
     except TypeError:
+        logger.info(f"No genre - {rec.harvest_id}")
         pass
     for identifier in rec.identifier:
         if identifier.startswith('http'):
@@ -36,6 +44,7 @@ def ssdn_qdc_map(rec):
         if rec.rights[0].startswith('http'):
             sr.rights = [{'@id': rec.rights[0]}]
         else:
+            logger.warning(f"No rights URI - {rec.harvest_id}")
             sr.rights = [{'text': rec.rights[0]}]
     if rec.subject:
         sr.subject = [{'name': subject} for subject in rec.subject]

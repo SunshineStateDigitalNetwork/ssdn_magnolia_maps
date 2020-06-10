@@ -1,8 +1,13 @@
+import logging
 import re
 
 from citrus import SourceResource, SourceResourceRequiredElementException
 
 from assets import tgn_cache
+
+logger = logging.getLogger(__name__)
+logger.addHandler(logging.NullHandler())
+logger.debug(f'Loaded {__name__} map')
 
 first_baptist = re.compile('^FSU_FBCTLH')
 leon_high = re.compile('^FSU_LeonHigh')
@@ -34,6 +39,7 @@ def fsu_mods_map(rec):
     try:
         sr.identifier = rec.identifier
     except IndexError:
+        logger.error(f"No identifier - {rec.harvest_id}")
         pass
     sr.language = rec.language
     sr.spatial = rec.place
@@ -42,8 +48,10 @@ def fsu_mods_map(rec):
         if rec.rights.startswith('http:'):
             sr.rights = [{'@id': rec.rights}]
         else:
+            logger.warning(f"No rights URI - {rec.harvest_id}")
             sr.rights = [{'text': rec.rights}]
     except (AttributeError, SourceResourceRequiredElementException):
+        logger.error(f"No rights - {rec.harvest_id}")
         pass
     try:
         attribution = "This record contains information from Thesaurus of Geographic Names (TGN) which is made available under the ODC Attribution License."

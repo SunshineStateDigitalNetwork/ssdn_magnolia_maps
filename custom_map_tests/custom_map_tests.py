@@ -170,7 +170,7 @@ class BrockwayCustomMapTestCase(unittest.TestCase):
     def tearDown(self):
         clean()
 
-    def test_boynton_dc_custom_map(self):
+    def test_brockway_dc_custom_map(self):
         transformation_info = {'Map': 'fiu_dc_map',
                                'DataProvider': 'Miami Shores Village Archives at Brockway Memorial Library',
                                'IntermediateProvider': 'Florida International University Libraries',
@@ -189,7 +189,7 @@ class CoralGablesCustomMapTestCase(unittest.TestCase):
     def tearDown(self):
         clean()
 
-    def test_boynton_dc_custom_map(self):
+    def test_coral_gables_dc_custom_map(self):
         transformation_info = {'Map': 'fiu_dc_map',
                                'DataProvider': 'City of Coral Gables',
                                'IntermediateProvider': 'Florida International University Libraries',
@@ -208,7 +208,7 @@ class MBVMCustomMapTestCase(unittest.TestCase):
     def tearDown(self):
         clean()
 
-    def test_boynton_dc_custom_map(self):
+    def test_mbvm_dc_custom_map(self):
         transformation_info = {'Map': 'fiu_dc_map',
                                'DataProvider': 'Miami Design Preservation League, Closeup Productions',
                                'IntermediateProvider': 'Florida International University Libraries',
@@ -246,7 +246,7 @@ class VaclavCustomMapTestCase(unittest.TestCase):
     def tearDown(self):
         clean()
 
-    def test_boynton_dc_custom_map(self):
+    def test_vaclav_dc_custom_map(self):
         transformation_info = {'Map': 'fiu_dc_map',
                                'DataProvider': 'Vaclav Havel Library Foundation',
                                'IntermediateProvider': 'Florida International University Libraries',

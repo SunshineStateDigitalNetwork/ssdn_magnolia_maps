@@ -1,6 +1,11 @@
+import logging
 import dateparser
 
 from citrus import SourceResource
+
+logger = logging.getLogger(__name__)
+logger.addHandler(logging.NullHandler())
+logger.debug(f'Loaded {__name__} map')
 
 
 def dlis_ia_map(rec):

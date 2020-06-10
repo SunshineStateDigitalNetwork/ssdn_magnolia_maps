@@ -1,4 +1,10 @@
+import logging
+
 from citrus import SourceResource
+
+logger = logging.getLogger(__name__)
+logger.addHandler(logging.NullHandler())
+logger.debug(f'Loaded {__name__} map')
 
 
 def fiu_dc_map(rec):
@@ -14,6 +20,7 @@ def fiu_dc_map(rec):
                    'end': rec.date[0],
                    'displayDate': rec.date[0]}
     except TypeError:
+        logger.info(f"No date - {rec.harvest_id}")
         pass
     sr.description = rec.description
     sr.format = rec.format
@@ -23,18 +30,23 @@ def fiu_dc_map(rec):
     try:
         sr.language = [{'name': lang} for lang in rec.language]
     except TypeError:
+        logger.info(f"No language - {rec.harvest_id}")
         pass
     if rec.place:
         sr.spatial = [{'name': place} for place in rec.place]
     sr.publisher = rec.publisher
-    if len(rec.rights) > 1:
-        for r in rec.rights:
-            if r.startswith('http'):
-                sr.rights = [{'@id': r}]
+    try:
+        if len(rec.rights) > 1:
+            for r in rec.rights:
+                if r.startswith('http'):
+                    sr.rights = [{'@id': r}]
+    except TypeError:
+        logger.error(f"No rights - {rec.harvest_id}")
     else:
         if rec.rights[0].startswith('http'):
             sr.rights = [{'@id': rec.rights[0]}]
         else:
+            logger.warning(f"No rights URI - {rec.harvest_id}")
             sr.rights = [{'text': rec.rights[0]}]
     if rec.subject:
         sr.subject = [{'name': subject} for subject in rec.subject]

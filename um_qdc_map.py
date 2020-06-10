@@ -1,7 +1,12 @@
+import logging
 import requests
 from bs4 import BeautifulSoup
 
 from citrus import SourceResource
+
+logger = logging.getLogger(__name__)
+logger.addHandler(logging.NullHandler())
+logger.debug(f'Loaded {__name__} map')
 
 IANA_type_list = []
 
@@ -14,6 +19,7 @@ for type in IANA_parsed.find_all('file'):
 def um_qdc_map(rec):
     if rec.requires:
         if 'noharvest' in rec.requires:
+            logger.info(f"Marked `noharvest` {rec.harvest_id}")
             return None
     sr = SourceResource()
     if rec.contributor:
@@ -27,6 +33,7 @@ def um_qdc_map(rec):
                    'end': rec.date[0],
                    'displayDate': rec.date[0]}
     except TypeError:
+        logger.info(f"No date - {rec.harvest_id}")
         pass
     sr.description = rec.description
     sr.genre = [{'name': genre}
@@ -47,6 +54,7 @@ def um_qdc_map(rec):
         if rec.rights[0].startswith('http'):
             sr.rights = [{'@id': rec.rights[0]}]
         else:
+            logger.warning(f"No rights URI - {rec.harvest_id}")
             sr.rights = [{'text': rec.rights[0]}]
     if rec.subject:
         sr.subject = [{'name': subject} for subject in rec.subject]

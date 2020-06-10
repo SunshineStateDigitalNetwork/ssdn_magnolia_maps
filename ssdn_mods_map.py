@@ -1,4 +1,10 @@
+import logging
+
 from citrus import SourceResource, SourceResourceRequiredElementException
+
+logger = logging.getLogger(__name__)
+logger.addHandler(logging.NullHandler())
+logger.debug(f'Loaded {__name__} map')
 
 
 def ssdn_mods_map(rec):
@@ -25,6 +31,7 @@ def ssdn_mods_map(rec):
     try:
         sr.identifier = rec.identifier
     except IndexError:
+        logger.error(f"No identifier - {rec.harvest_id}")
         pass
     sr.language = rec.language
     sr.spatial = rec.place
@@ -33,6 +40,7 @@ def ssdn_mods_map(rec):
         if rec.rights.startswith('http:'):
             sr.rights = [{'@id': rec.rights}]
         else:
+            logger.warning(f"No rights URI - {rec.harvest_id}")
             sr.rights = [{'text': rec.rights}]
     except SourceResourceRequiredElementException:
         pass

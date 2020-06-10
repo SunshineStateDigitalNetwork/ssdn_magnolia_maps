@@ -1,4 +1,10 @@
+import logging
+
 from citrus import SourceResource
+
+logger = logging.getLogger(__name__)
+logger.addHandler(logging.NullHandler())
+logger.debug(f'Loaded {__name__} map')
 
 
 def ssdn_dc_bepress_map(rec):
@@ -14,6 +20,7 @@ def ssdn_dc_bepress_map(rec):
                    'end': rec.date,
                    'displayDate': rec.date}
     except TypeError:
+        logger.info(f"No date - {rec.harvest_id}")
         pass
     sr.description = rec.description
     sr.format = rec.format
@@ -23,6 +30,7 @@ def ssdn_dc_bepress_map(rec):
     try:
         sr.language = [{'name': lang} for lang in rec.language]
     except TypeError:
+        logger.info(f"No language - {rec.harvest_id}")
         pass
     if rec.place:
         sr.spatial = [{'name': place} for place in rec.place]
@@ -35,6 +43,7 @@ def ssdn_dc_bepress_map(rec):
         if rec.rights[0].startswith('http'):
             sr.rights = [{'@id': rec.rights[0]}]
         else:
+            logger.warning(f"No rights URI - {rec.harvest_id}")
             sr.rights = [{'text': rec.rights[0]}]
     if rec.subject:
         sr.subject = [{'name': subject} for subject in rec.subject]
