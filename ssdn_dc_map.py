@@ -24,9 +24,13 @@ def ssdn_dc_map(rec):
         pass
     sr.description = rec.description
     sr.format = rec.format
-    for identifier in rec.identifier:
-        if identifier.startswith('http'):
-            sr.identifier = identifier
+    try:
+        for identifier in rec.identifier:
+            if identifier.startswith('http'):
+                sr.identifier = identifier
+    except TypeError:
+        logger.warning(f"No identifier - {rec.harvest_id}")
+        pass
     try:
         sr.language = [{'name': lang} for lang in rec.language]
     except TypeError:

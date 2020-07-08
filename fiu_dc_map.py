@@ -24,9 +24,13 @@ def fiu_dc_map(rec):
         pass
     sr.description = rec.description
     sr.format = rec.format
-    for identifier in rec.identifier:
-        if 'dpanther.fiu.edu' in identifier:
-            sr.identifier = identifier
+    try:
+        for identifier in rec.identifier:
+            if 'dpanther.fiu.edu' in identifier:
+                sr.identifier = identifier
+    except TypeError:
+        logger.warning(f"No identifier - {rec.harvest_id}")
+        pass
     try:
         sr.language = [{'name': lang} for lang in rec.language]
     except TypeError:
@@ -40,14 +44,14 @@ def fiu_dc_map(rec):
             for r in rec.rights:
                 if r.startswith('http'):
                     sr.rights = [{'@id': r}]
+        else:
+            if rec.rights[0].startswith('http'):
+                sr.rights = [{'@id': rec.rights[0]}]
+            else:
+                logger.warning(f"No rights URI - {rec.harvest_id}")
+                sr.rights = [{'text': rec.rights[0]}]
     except TypeError:
         logger.error(f"No rights - {rec.harvest_id}")
-    else:
-        if rec.rights[0].startswith('http'):
-            sr.rights = [{'@id': rec.rights[0]}]
-        else:
-            logger.warning(f"No rights URI - {rec.harvest_id}")
-            sr.rights = [{'text': rec.rights[0]}]
     if rec.subject:
         sr.subject = [{'name': subject} for subject in rec.subject]
     sr.title = rec.title
@@ -56,5 +60,7 @@ def fiu_dc_map(rec):
     # thumbnail
     if rec.thumbnail:
         tn = rec.thumbnail
+    else:
+        tn = None
 
     yield sr, tn

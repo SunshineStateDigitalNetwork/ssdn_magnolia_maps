@@ -42,7 +42,8 @@ def ssdn_mods_map(rec):
         else:
             logger.warning(f"No rights URI - {rec.harvest_id}")
             sr.rights = [{'text': rec.rights}]
-    except SourceResourceRequiredElementException:
+    except (SourceResourceRequiredElementException, AttributeError):
+        logger.warning(f"No rights - {rec.harvest_id}")
         pass
     sr.subject = rec.subject
     sr.title = [rec.title]
