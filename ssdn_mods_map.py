@@ -9,6 +9,8 @@ logger.debug(f'Loaded {__name__} map')
 
 def ssdn_mods_map(rec):
     sr = SourceResource()
+    
+    # alternative title
     sr.alternative = rec.alternative
 
     # Archival collection info
@@ -28,14 +30,19 @@ def ssdn_mods_map(rec):
     sr.description = rec.description
     sr.extent = rec.extent
     sr.genre = rec.format
+    
+    # identifier
     try:
         sr.identifier = rec.identifier
     except IndexError:
         logger.error(f"No identifier - {rec.harvest_id}")
-        pass
+        return None
+    
     sr.language = rec.language
     sr.spatial = rec.place
     sr.publisher = rec.publisher
+    
+    # rights
     try:
         if rec.rights.startswith('http:'):
             sr.rights = [{'@id': rec.rights}]
@@ -43,8 +50,9 @@ def ssdn_mods_map(rec):
             logger.warning(f"No rights URI - {rec.harvest_id}")
             sr.rights = [{'text': rec.rights}]
     except (SourceResourceRequiredElementException, AttributeError):
-        logger.warning(f"No rights - {rec.harvest_id}")
-        pass
+        logger.error(f"No rights - {rec.harvest_id}")
+        return None
+    
     sr.subject = rec.subject
     sr.title = [rec.title]
     sr.type = rec.type

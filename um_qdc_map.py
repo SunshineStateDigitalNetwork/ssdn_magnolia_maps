@@ -17,35 +17,59 @@ for type in IANA_parsed.find_all('file'):
 
 
 def um_qdc_map(rec):
+    
+    # handling for how UM marks records to skip
     if rec.requires:
         if 'noharvest' in rec.requires:
             logger.info(f"Marked `noharvest` {rec.harvest_id}")
             return None
+    
+    
     sr = SourceResource()
+    
+    # contributor
     if rec.contributor:
         sr.contributor = [{'name': contributor} for contributor in
                           rec.contributor]
+    
+    # creator
     if rec.creator:
         sr.creator = [{'name': creator} for creator in
                       rec.creator]
+    
+    # date
     try:
         sr.date = {'begin': rec.date[0],
                    'end': rec.date[0],
                    'displayDate': rec.date[0]}
     except TypeError:
         logger.info(f"No date - {rec.harvest_id}")
-        pass
+    
+    # description
     sr.description = rec.description
+    
+    # genre
     sr.genre = [{'name': genre}
                 for genre in rec.format
                 if genre.lower() not in IANA_type_list]
+    
+    # identifier
     for identifier in rec.identifier:
         if 'merrick.library.miami.edu' in identifier:
             sr.identifier = identifier
+        else:
+            logger.error(f"No identifier - {rec.harvest_id}")
+            return None
+    
+    # language
     sr.language = rec.language
+    
+    # place
     if rec.place:
         sr.spatial = [{'name': place} for place in rec.place]
     sr.publisher = rec.publisher
+    
+    # rights
     if len(rec.rights) > 1:
         for r in rec.rights:
             if r.startswith('http'):
@@ -56,13 +80,27 @@ def um_qdc_map(rec):
         else:
             logger.warning(f"No rights URI - {rec.harvest_id}")
             sr.rights = [{'text': rec.rights[0]}]
+    
+    # subject
     if rec.subject:
         sr.subject = [{'name': subject} for subject in rec.subject]
+    
+    # title
     sr.title = rec.title
+    
+    # type
     sr.type = rec.type
+    
+    # alternative title
     sr.alternative = rec.alternative
+    
+    # abstract
     sr.abstract = rec.abstract
+    
+    # collection
     sr.collection = {'host': rec.is_part_of[0], 'name': rec.is_part_of[1]}
+    
+    # extent
     sr.extent = rec.extent
 
     # thumbnail
