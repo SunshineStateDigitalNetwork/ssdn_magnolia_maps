@@ -1,8 +1,9 @@
-import os
 import csv
+import os
+from os.path import abspath, dirname, join
+
 import requests
 from bs4 import BeautifulSoup
-from os.path import abspath, dirname, join
 
 iso_path = abspath(dirname(__file__))
 

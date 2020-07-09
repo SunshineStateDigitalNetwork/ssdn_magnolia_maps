@@ -1,6 +1,6 @@
 import logging
-import dateparser
 
+import dateparser
 from citrus import SourceResource
 
 logger = logging.getLogger(__name__)
@@ -10,7 +10,7 @@ logger.debug(f'Loaded {__name__} map')
 
 def dlis_ia_map(rec):
     sr = SourceResource()
-    
+
     # contributor
     try:
         if isinstance(rec.contributor, list):
@@ -19,7 +19,7 @@ def dlis_ia_map(rec):
             sr.contributor = [{'name': rec.contributor.strip('.')}]
     except KeyError:
         pass
-    
+
     # creator
     try:
         if isinstance(rec.creator, list):
@@ -28,7 +28,7 @@ def dlis_ia_map(rec):
             sr.creator = [{'name': rec.creator.strip('.')}]
     except KeyError:
         logger.info(f"No creator - {rec.harvest_id}")
-    
+
     # date
     try:
         if rec.date:
@@ -36,27 +36,27 @@ def dlis_ia_map(rec):
             sr.date = {"begin": d, "end": d, "displayDate": d}
     except KeyError:
         logger.info(f"No date - {rec.harvest_id}")
-    
+
     # description
     try:
         if rec.description:
             sr.description = rec.description.strip(' ')
     except KeyError:
         pass
-    
+
     # identifier
     sr.identifier = 'https://archive.org/details/{}'.format(rec.identifier)
-    
+
     # language
     try:
         if rec.language:
             sr.language = rec.language
     except KeyError:
         pass
-    
+
     # rights
     sr.rights = {'@id': 'http://rightsstatements.org/vocab/NoC-US/1.0/'}
-    
+
     # subject
     try:
         if isinstance(rec.subject, list):
@@ -65,7 +65,7 @@ def dlis_ia_map(rec):
             sr.subject = [{'name': rec.subject.strip('.')}]
     except KeyError:
         logger.info(f"No subject - {rec.harvest_id}")
-    
+
     # title
     if rec.title:
         sr.title = rec.title

@@ -36,17 +36,17 @@ def fsu_mods_map(rec):
     sr.description = rec.description
     sr.extent = rec.extent
     sr.genre = rec.format
-    
+
     # identifier
     try:
         sr.identifier = rec.identifier
     except IndexError:
         logger.error(f"No identifier - {rec.harvest_id}")
-        pass
+        return None
     sr.language = rec.language
     sr.spatial = rec.place
     sr.publisher = rec.publisher
-    
+
     # rights
     try:
         if rec.rights.startswith('http:'):
@@ -57,8 +57,7 @@ def fsu_mods_map(rec):
     except (AttributeError, SourceResourceRequiredElementException):
         logger.error(f"No rights - {rec.harvest_id}")
         return None
-    
-    
+
     # place
     try:
         attribution = "This record contains information from Thesaurus of Geographic Names (TGN) which is made available under the ODC Attribution License."
@@ -73,7 +72,7 @@ def fsu_mods_map(rec):
     sr.subject = rec.subject
     sr.title = [rec.title]
     sr.type = rec.type
-    
+
     # thumbnail
     tn = f'https://fsu.digital.flvc.org/islandora/object/{rec.pid}/datastream/TN/view'
 

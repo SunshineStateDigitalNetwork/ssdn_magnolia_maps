@@ -8,8 +8,8 @@
     </header>
     <metadata>
       <oai_qdc:qualifieddc xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
-        <dc:title>Jes&#xFA;s Consuegra letter to Gerardo Machado, November 24, 1937</dc:title>
-        <dc:creator>Consuegra, Jes&#xFA;s</dc:creator>
+        <dc:title>Jesús Consuegra letter to Gerardo Machado, November 24, 1937</dc:title>
+        <dc:creator>Consuegra, Jesús</dc:creator>
         <dc:description>Sent from Havana to New York</dc:description>
         <dc:format>Correspondence</dc:format>
         <dcterms:created>1937-11-24</dcterms:created>
@@ -27,7 +27,7 @@
       </oai_qdc:qualifieddc>
     </metadata>
   </record>
-    <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <header>
       <identifier>oai:merrick.library.miami.edu:5314/0</identifier>
       <datestamp>2019-01-14</datestamp>
@@ -37,7 +37,7 @@
       <oai_qdc:qualifieddc xmlns:oai_qdc="http://worldcat.org/xmlschemas/qdc-1.0/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://worldcat.org/xmlschemas/qdc-1.0/ http://worldcat.org/xmlschemas/qdc/1.0/qdc-1.0.xsd http://purl.org/net/oclcterms http://worldcat.org/xmlschemas/oclcterms/1.4/oclcterms-1.4.xsd">
         <dc:title>Club Kawama parking area</dc:title>
         <dc:creator>Moenck y Quintana Arquitectos</dc:creator>
-        <dc:creator>Quintana, Nicola&#x301;s,&#x200F; 1925-2011&#x200F;</dc:creator>
+        <dc:creator>Quintana, Nicolás, 1925-2011</dc:creator>
         <dc:description>Typewritten on back of photograph: "Club Kawama Parking Area. Varadero, Matanzas, Cuba. Two coats of Thoroseal were used under the concrete areas. About 50-60# drums of Thoroseal were used. Some of the cabanas were done with Thoroclear. More than 200 gals. used. Architect, Contractor - Moenck y Quintana"</dc:description>
         <dc:subject>Automobile parking -- Cuba -- Varadero; Automobiles -- Cuba -- Varadero; Resorts -- Cuba -- Varadero; Clubs -- Cuba -- Varadero</dc:subject>
         <dc:format>Photographs</dc:format>
@@ -47,7 +47,7 @@
         <dcterms:extent>1 black and white photograph</dcterms:extent>
         <dc:language>eng</dc:language>
         <dcterms:isPartOf>University of Miami. Library. Cuban Heritage Collection</dcterms:isPartOf>
-        <dcterms:isPartOf>Nicol&#xE1;s Quintana Papers</dcterms:isPartOf>
+        <dcterms:isPartOf>Nicolás Quintana Papers</dcterms:isPartOf>
         <dcterms:isPartOf>CHC5314</dcterms:isPartOf>
         <dc:rights>This material is protected by copyright. Copyright is held by the creator. For additional information, please visit: http://merrick.library.miami.edu/digitalprojects/copyright.html</dc:rights>
         <dc:rights>http://rightsstatements.org/vocab/InC/1.0/</dc:rights>

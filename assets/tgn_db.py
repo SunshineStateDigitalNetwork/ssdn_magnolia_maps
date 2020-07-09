@@ -1,7 +1,8 @@
 import json
 import sqlite3
-import requests
 from os.path import abspath, dirname, join
+
+import requests
 
 tgn_path = abspath(dirname(__file__))
 tgn_prefix = 'http://vocab.getty.edu/tgn/'
@@ -22,7 +23,7 @@ def db_query(geo_code):
     token = (geo_code,)
     tgn_cursor.execute('SELECT * FROM tgn WHERE code=?', token)
     return tgn_cursor.fetchone()
-    
+
 
 def db_write(geo_code):
     tgn_place = geo_code + '-place.jsonld'

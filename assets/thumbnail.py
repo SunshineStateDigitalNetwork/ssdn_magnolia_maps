@@ -1,4 +1,5 @@
 import re
+
 import bs4
 import requests
 
@@ -53,4 +54,3 @@ def thumbnail_service(identifier, tn):
     # Custom OAI-PMH field
     elif tn['name'] == 'custom_field':
         return identifier.metadata.get_element('{*}identifier.thumbnail')[0]
-

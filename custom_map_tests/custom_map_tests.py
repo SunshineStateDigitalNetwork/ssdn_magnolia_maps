@@ -9,6 +9,7 @@ from citrus.cli import transform
 
 test_dir_path = os.path.abspath(os.path.dirname(__file__))
 
+
 def stand_up(self):
     """
     Open and load verification data
@@ -21,6 +22,7 @@ def stand_up(self):
                             'Provider': 'Sunshine State Digital Network',
                             'CustomMapPath': os.path.split(test_dir_path)[0]}}
     return self
+
 
 def clean():
     """
@@ -36,7 +38,7 @@ class FSUCustomMapTestCase(unittest.TestCase):
 
     def tearDown(self):
         clean()
-    
+
     def test_fsu_mods_custom_map(self):
         transformation_info = {'Map': 'fsu_mods_map',
                                'DataProvider': 'Florida State University Libraries',
@@ -46,8 +48,8 @@ class FSUCustomMapTestCase(unittest.TestCase):
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[13])
-        
-        
+
+
 class FBCTLHCustomMapTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -55,7 +57,7 @@ class FBCTLHCustomMapTestCase(unittest.TestCase):
 
     def tearDown(self):
         clean()
-        
+
     def test_fbctlh_mods_custom_map(self):
         transformation_info = {'Map': 'fsu_mods_map',
                                'DataProvider': 'First Baptist Church of Tallahassee',
@@ -65,8 +67,8 @@ class FBCTLHCustomMapTestCase(unittest.TestCase):
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[9])
-        
-        
+
+
 class LeonHighCustomMapTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -74,7 +76,7 @@ class LeonHighCustomMapTestCase(unittest.TestCase):
 
     def tearDown(self):
         clean()
-        
+
     def test_fbctlh_mods_custom_map(self):
         transformation_info = {'Map': 'fsu_mods_map',
                                'DataProvider': 'First Baptist Church of Tallahassee',
@@ -83,9 +85,9 @@ class LeonHighCustomMapTestCase(unittest.TestCase):
         transform(self.config, transformation_info, 'leon', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
-        self.assertEqual(test_data, self.data[12])        
-        
-        
+        self.assertEqual(test_data, self.data[12])
+
+
 class GodbyHighCustomMapTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -93,7 +95,7 @@ class GodbyHighCustomMapTestCase(unittest.TestCase):
 
     def tearDown(self):
         clean()
-        
+
     def test_fbctlh_mods_custom_map(self):
         transformation_info = {'Map': 'fsu_mods_map',
                                'DataProvider': 'First Baptist Church of Tallahassee',
@@ -102,17 +104,17 @@ class GodbyHighCustomMapTestCase(unittest.TestCase):
         transform(self.config, transformation_info, 'godby', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
-        self.assertEqual(test_data, self.data[10])   
+        self.assertEqual(test_data, self.data[10])
 
 
 class HavanaHHSCustomMapTestCase(unittest.TestCase):
 
     def setUp(self):
         self = stand_up(self)
-                                                            
+
     def tearDown(self):
         clean()
-        
+
     def test_fbctlh_mods_custom_map(self):
         transformation_info = {'Map': 'fsu_mods_map',
                                'DataProvider': 'First Baptist Church of Tallahassee',
@@ -159,7 +161,7 @@ class BoyntonBeachCustomMapTestCase(unittest.TestCase):
         transform(self.config, transformation_info, 'boynton', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
-        self.assertEqual(test_data, self.data[0])        
+        self.assertEqual(test_data, self.data[0])
 
 
 class BrockwayCustomMapTestCase(unittest.TestCase):
@@ -179,8 +181,8 @@ class BrockwayCustomMapTestCase(unittest.TestCase):
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[1])
-        
-        
+
+
 class CoralGablesCustomMapTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -255,8 +257,8 @@ class VaclavCustomMapTestCase(unittest.TestCase):
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[19])
-        
-        
+
+
 class UMCustomMapTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -274,8 +276,8 @@ class UMCustomMapTestCase(unittest.TestCase):
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[17])
-        
-        
+
+
 class IR_FIUCustomMapTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -283,7 +285,7 @@ class IR_FIUCustomMapTestCase(unittest.TestCase):
 
     def tearDown(self):
         clean()
-    
+
     def test_ir_fiu_dc_custom_map(self):
         transformation_info = {'Map': 'ssdn_dc_bepress_map',
                                'DataProvider': 'Florida International University Libraries',
@@ -292,7 +294,7 @@ class IR_FIUCustomMapTestCase(unittest.TestCase):
         transform(self.config, transformation_info, 'ir_fiu', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
-        self.assertEqual(test_data, self.data[15])        
+        self.assertEqual(test_data, self.data[15])
 
 
 class BrowardCustomMapTestCase(unittest.TestCase):
@@ -302,7 +304,7 @@ class BrowardCustomMapTestCase(unittest.TestCase):
 
     def tearDown(self):
         clean()
-    
+
     def test_broward_mods_custom_map(self):
         transformation_info = {'Map': 'ssdn_mods_map',
                                'DataProvider': 'Broward College Archives & Special Collections',
@@ -312,8 +314,8 @@ class BrowardCustomMapTestCase(unittest.TestCase):
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[2])
-        
-      
+
+
 class FAUCustomMapTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -321,7 +323,7 @@ class FAUCustomMapTestCase(unittest.TestCase):
 
     def tearDown(self):
         clean()
-    
+
     def test_fau_mods_custom_map(self):
         transformation_info = {'Map': 'ssdn_mods_map',
                                'DataProvider': 'Florida Atlantic University',
@@ -330,8 +332,8 @@ class FAUCustomMapTestCase(unittest.TestCase):
         transform(self.config, transformation_info, 'fau', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
-        self.assertEqual(test_data, self.data[4])        
-        
+        self.assertEqual(test_data, self.data[4])
+
 
 class FGCUCustomMapTestCase(unittest.TestCase):
 
@@ -340,7 +342,7 @@ class FGCUCustomMapTestCase(unittest.TestCase):
 
     def tearDown(self):
         clean()
-    
+
     def test_fgcu_mods_custom_map(self):
         transformation_info = {'Map': 'ssdn_mods_map',
                                'DataProvider': 'Florida Gulf Coast University Library',
@@ -349,9 +351,9 @@ class FGCUCustomMapTestCase(unittest.TestCase):
         transform(self.config, transformation_info, 'fgcu', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
-        self.assertEqual(test_data, self.data[5])         
+        self.assertEqual(test_data, self.data[5])
 
- 
+
 class FSCJCustomMapTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -359,7 +361,7 @@ class FSCJCustomMapTestCase(unittest.TestCase):
 
     def tearDown(self):
         clean()
-    
+
     def test_fscj_mods_custom_map(self):
         transformation_info = {'Map': 'ssdn_mods_map',
                                'DataProvider': 'Florida State College at Jacksonville',
@@ -368,27 +370,27 @@ class FSCJCustomMapTestCase(unittest.TestCase):
         transform(self.config, transformation_info, 'fscj', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
-        self.assertEqual(test_data, self.data[8])        
-        
+        self.assertEqual(test_data, self.data[8])
+
 
 class InternetArchiveCustomMapTestCase(unittest.TestCase):
-    
     class MockResponse(MagicMock):
         """
         Class for mocking out calls to requests.get
         """
+
         def __init__(self, *args, **kwargs):
             MagicMock.__init__(self, *args, **kwargs)
-            with open(os.path.join(test_dir_path, 'transformation_test_data/statelibraryandarchivesofflorida.json')) as state_lib_data:
+            with open(os.path.join(test_dir_path,
+                                   'transformation_test_data/statelibraryandarchivesofflorida.json')) as state_lib_data:
                 self.text = state_lib_data.read()
-    
 
     def setUp(self):
         self = stand_up(self)
 
     def tearDown(self):
         clean()
-    
+
     @patch('requests.get', side_effect=MockResponse)
     def test_state_library_custom_map(self, requests_mock):
         transformation_info = {'Map': 'dlis_ia_map',
@@ -398,9 +400,9 @@ class InternetArchiveCustomMapTestCase(unittest.TestCase):
         transform(self.config, transformation_info, 'statelibraryandarchivesofflorida', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
-        self.assertEqual(test_data, self.data[20])        
-        
-      
+        self.assertEqual(test_data, self.data[20])
+
+
 class MDPLCustomMapTestCase(unittest.TestCase):
 
     def setUp(self):
@@ -417,7 +419,7 @@ class MDPLCustomMapTestCase(unittest.TestCase):
         transform(self.config, transformation_info, 'mdpl', 'ssdn', verbosity=1)
         with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
             test_data = json.load(fp)
-        self.assertEqual(test_data, self.data[16])        
+        self.assertEqual(test_data, self.data[16])
 
 
 class USFCustomMapTestCase(unittest.TestCase):
