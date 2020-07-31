@@ -53,7 +53,7 @@ def um_qdc_map(rec):
 
     # identifier
     for identifier in rec.identifier:
-        if 'merrick.library.miami.edu' in identifier:
+        if 'cdm17191.contentdm.oclc.org' in identifier:
             sr.identifier = identifier
     if not sr.identifier:
         logger.error(f"No identifier - {rec.harvest_id}")
@@ -102,7 +102,7 @@ def um_qdc_map(rec):
     sr.extent = rec.extent
 
     # thumbnail
-    prefix = 'http://merrick.library.miami.edu'
+    prefix = 'http://cdm17191.contentdm.oclc.org'
     collection_list = identifier.split('/')[-4:]
     cdm_tn_path = f'/utils/getthumbnail/collection/{collection_list[1]}/id/{collection_list[3]}'
     tn = prefix + cdm_tn_path

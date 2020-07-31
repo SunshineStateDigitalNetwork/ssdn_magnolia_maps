@@ -23,7 +23,7 @@
         <dc:identifier>chc0336000606</dc:identifier>
         <dc:type>Text</dc:type>
         <dc:format>image/tiff</dc:format>
-        <dc:identifier>http://merrick.library.miami.edu/cdm/ref/collection/chc0336/id/421</dc:identifier>
+        <dc:identifier>http://cdm17191.contentdm.oclc.org/cdm/ref/collection/chc0336/id/421</dc:identifier>
       </oai_qdc:qualifieddc>
     </metadata>
   </record>
@@ -56,7 +56,7 @@
         <dc:format>image/tiff</dc:format>
         <!-- value in requires element indicates the entire record should be ignored -->
         <dcterms:requires>noharvest</dcterms:requires>
-        <dc:identifier>http://merrick.library.miami.edu/cdm/ref/collection/5314/id/0</dc:identifier>
+        <dc:identifier>http://cdm17191.contentdm.oclc.org/cdm/ref/collection/5314/id/0</dc:identifier>
       </oai_qdc:qualifieddc>
     </metadata>
   </record>
