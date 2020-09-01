@@ -15,11 +15,13 @@ def stand_up(self):
     Open and load verification data
     init local test config
     """
+
     with open(os.path.join(test_dir_path, 'transformation_test_data/transformation_verification.json')) as fp:
         self.data = [json.loads(line) for line in fp]
     self.config = {'ssdn': {'InFilePath': os.path.join(test_dir_path, 'transformation_test_data'),
                             'OutFilePath': os.path.join(test_dir_path, 'transformation_test_data'),
                             'Provider': 'Sunshine State Digital Network',
+                            'OutFilePrefix': 'SSDN_TMP',
                             'CustomMapPath': os.path.split(test_dir_path)[0]}}
     return self
 
