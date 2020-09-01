@@ -47,9 +47,12 @@ def um_qdc_map(rec):
     sr.description = rec.description
 
     # genre
-    sr.genre = [{'name': genre}
-                for genre in rec.format
-                if genre.lower() not in IANA_type_list]
+    try:
+        sr.genre = [{'name': genre}
+                    for genre in rec.format
+                    if genre.lower() not in IANA_type_list]
+    except TypeError:
+        logger.info(f"No genre - {rec.harvest_id")
 
     # identifier
     for identifier in rec.identifier:
