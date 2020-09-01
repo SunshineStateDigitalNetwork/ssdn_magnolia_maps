@@ -52,7 +52,7 @@ def um_qdc_map(rec):
                     for genre in rec.format
                     if genre.lower() not in IANA_type_list]
     except TypeError:
-        logger.info(f"No genre - {rec.harvest_id")
+        logger.info(f"No genre - {rec.harvest_id}")
 
     # identifier
     for identifier in rec.identifier:
