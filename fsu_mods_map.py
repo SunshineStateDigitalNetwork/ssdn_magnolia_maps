@@ -1,7 +1,7 @@
 import logging
 import re
 
-from citrus import SourceResource, SourceResourceRequiredElementException
+from magnolia import SourceResource, SourceResourceRequiredElementException
 
 from assets import tgn_cache
 

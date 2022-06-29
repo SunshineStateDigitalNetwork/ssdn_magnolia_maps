@@ -5,7 +5,7 @@ from datetime import date
 from pathlib import Path
 from unittest.mock import patch, MagicMock
 
-from citrus.cli import transform
+from magnolia.cli import transform
 
 test_dir_path = os.path.abspath(os.path.dirname(__file__))
 

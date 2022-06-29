@@ -1,1 +1,1 @@
-# ssdn_citrus_maps
+# ssdn_magnolia_maps

@@ -2,7 +2,7 @@ import logging
 
 import requests
 from bs4 import BeautifulSoup
-from citrus import SourceResource
+from magnolia import SourceResource
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())

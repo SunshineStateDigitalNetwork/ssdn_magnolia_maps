@@ -1,6 +1,6 @@
 import logging
 
-from citrus import SourceResource, SourceResourceRequiredElementException
+from magnolia import SourceResource, SourceResourceRequiredElementException
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())

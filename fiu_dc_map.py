@@ -1,6 +1,6 @@
 import logging
 
-from citrus import SourceResource
+from magnolia import SourceResource
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
