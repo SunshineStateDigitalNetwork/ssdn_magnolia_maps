@@ -1,7 +1,7 @@
 import logging
 
 import dateparser
-from magnolia import SourceResource
+from manatus import SourceResource
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())

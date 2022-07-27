@@ -1,6 +1,6 @@
 import logging
 
-from magnolia import SourceResource, SourceResourceRequiredElementException
+from manatus import SourceResource, SourceResourceRequiredElementException
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())

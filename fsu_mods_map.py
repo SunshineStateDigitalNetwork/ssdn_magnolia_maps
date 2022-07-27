@@ -1,7 +1,7 @@
 import logging
 import re
 
-from magnolia import SourceResource, SourceResourceRequiredElementException
+from manatus import SourceResource, SourceResourceRequiredElementException
 
 from assets import tgn_cache
 
