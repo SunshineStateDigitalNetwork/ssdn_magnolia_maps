@@ -70,7 +70,13 @@ def fsu_mods_map(rec):
     except TypeError:
         pass
     sr.subject = rec.subject
-    sr.title = [rec.title]
+
+    try:
+        sr.title = [rec.title]
+    except (AttributeError, SourceResourceRequiredElementException):
+        logger.error(f"No title - {rec.harvest_id}")
+        return None
+
     sr.type = rec.type
 
     # thumbnail
