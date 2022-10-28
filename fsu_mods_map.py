@@ -17,7 +17,11 @@ havana_hhs = re.compile('^FSU_HHHS')
 
 def fsu_mods_map(rec):
     sr = SourceResource()
-    sr.alternative = rec.alternative
+
+    try:
+        sr.alternative = rec.alternative
+    except (AttributeError, SourceResourceRequiredElementException):
+        return None
 
     # Archival collection info
     if rec.collection:
