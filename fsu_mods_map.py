@@ -20,7 +20,7 @@ def fsu_mods_map(rec):
 
     try:
         sr.alternative = rec.alternative
-    except (AttributeError, SourceResourceRequiredElementException):
+    except AttributeError:
         return None
 
     # Archival collection info
@@ -47,7 +47,12 @@ def fsu_mods_map(rec):
     except IndexError:
         logger.error(f"No identifier - {rec.harvest_id}")
         return None
-    sr.language = rec.language
+
+    try:
+        sr.language = rec.language
+    except AttributeError:
+        return None
+
     sr.spatial = rec.place
     sr.publisher = rec.publisher
 
