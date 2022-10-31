@@ -48,12 +48,18 @@ def fsu_mods_map(rec):
         logger.error(f"No identifier - {rec.harvest_id}")
         return None
 
+    # language
     try:
         sr.language = rec.language
     except AttributeError:
         return None
 
-    sr.spatial = rec.place
+    # place
+    try:
+        sr.spatial = rec.place
+    except (AttributeError, TypeError):
+        return None
+
     sr.publisher = rec.publisher
 
     # rights
@@ -78,8 +84,10 @@ def fsu_mods_map(rec):
                       for _, lat, long, label in geo_data_list]
     except TypeError:
         pass
+
     sr.subject = rec.subject
 
+    # title
     try:
         sr.title = [rec.title]
     except (AttributeError, SourceResourceRequiredElementException):
