@@ -26,7 +26,14 @@ def ssdn_mods_map(rec):
 
     sr.contributor = rec.contributor
     sr.creator = rec.creator
-    sr.date = rec.date
+
+    # date
+    try:
+        sr.date = rec.date
+    except TypeError:
+        logger.info(f"No date - {rec.harvest_id}")
+        pass
+    
     sr.description = rec.description
     sr.extent = rec.extent
     sr.genre = rec.format
