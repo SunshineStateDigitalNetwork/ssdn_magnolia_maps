@@ -99,7 +99,10 @@ def um_qdc_map(rec):
     sr.abstract = rec.abstract
 
     # collection
-    sr.collection = {'host': rec.is_part_of[0], 'name': rec.is_part_of[1]}
+    try:    
+        sr.collection = {'host': rec.is_part_of[0], 'name': rec.is_part_of[1]}
+    except IndexError:
+        pass
 
     # extent
     sr.extent = rec.extent
