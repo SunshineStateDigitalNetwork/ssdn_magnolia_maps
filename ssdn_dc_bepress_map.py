@@ -66,6 +66,7 @@ def ssdn_dc_bepress_map(rec):
                 sr.rights = [{'text': rec.rights[0]}]
     except TypeError:
         logger.error(f"No rights - {rec.harvest_id}")
+        return None
 
     # subject
     if rec.subject:
