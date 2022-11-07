@@ -34,7 +34,7 @@ def dlis_ia_map(rec):
         if rec.date:
             d = dateparser.parse(rec.date, languages=['en']).date().isoformat()
             sr.date = {"begin": d, "end": d, "displayDate": d}
-    except KeyError:
+    except (TypeError, KeyError):
         logger.info(f"No date - {rec.harvest_id}")
 
     # description
