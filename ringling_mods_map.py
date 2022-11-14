@@ -9,7 +9,7 @@ logger.addHandler(logging.NullHandler())
 logger.debug(f'Loaded {__name__} map')
 
 
-def fsu_mods_map(rec):
+def ringling_mods_map(rec):
     sr = SourceResource()
 
     try:
