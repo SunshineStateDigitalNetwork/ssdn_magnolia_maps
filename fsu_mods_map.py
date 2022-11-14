@@ -97,7 +97,7 @@ def fsu_mods_map(rec):
     sr.type = rec.type
 
     # thumbnail
-    tn = f'https://fsu.digital.flvc.org/islandora/object/{rec.pid}/datastream/TN/view'
+    tn = f'https://diginole.lib.fsu.edu/islandora/object/{rec.pid}/datastream/TN/view'
 
     # check if not in default data_provider scope
     first_baptist_iid = first_baptist.search(rec.iid)
