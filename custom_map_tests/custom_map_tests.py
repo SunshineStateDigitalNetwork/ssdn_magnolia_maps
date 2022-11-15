@@ -30,7 +30,10 @@ def clean():
     """
     Remove docs built for tests
     """
-    os.remove(Path(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')))
+    try:
+        os.remove(Path(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')))
+    except FileNotFoundError:
+        pass
 
 
 class FSUCustomMapTestCase(unittest.TestCase):

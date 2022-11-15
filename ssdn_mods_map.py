@@ -9,7 +9,6 @@ logger.debug(f'Loaded {__name__} map')
 
 def ssdn_mods_map(rec):
     sr = SourceResource()
-
     # alternative title
     sr.alternative = rec.alternative
 
