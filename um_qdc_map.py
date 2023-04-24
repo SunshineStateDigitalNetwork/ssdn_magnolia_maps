@@ -11,7 +11,7 @@ logger.debug(f'Loaded {__name__} map')
 IANA_type_list = []
 
 IANA_XML = requests.get('http://www.iana.org/assignments/media-types/media-types.xml')
-IANA_parsed = BeautifulSoup(IANA_XML.text, "lxml")
+IANA_parsed = BeautifulSoup(IANA_XML.text, features="xml")
 for type in IANA_parsed.find_all('file'):
     IANA_type_list.append(type.text)
 
