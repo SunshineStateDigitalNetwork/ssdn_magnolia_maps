@@ -57,16 +57,19 @@ def ssdn_dc_map(rec):
     sr.publisher = rec.publisher
 
     # rights
-    if len(rec.rights) > 1:
-        for r in rec.rights:
-            if r.startswith('http'):
-                sr.rights = [{'@id': r}]
-    else:
-        if rec.rights[0].startswith('http'):
-            sr.rights = [{'@id': rec.rights[0]}]
+    try:
+        if len(rec.rights) > 1:
+            for r in rec.rights:
+                if r.startswith('http'):
+                    sr.rights = [{'@id': r}]
         else:
-            logger.warning(f"No rights URI - {rec.harvest_id}")
-            sr.rights = [{'text': rec.rights[0]}]
+            if rec.rights[0].startswith('http'):
+                sr.rights = [{'@id': rec.rights[0]}]
+            else:
+                logger.warning(f"No rights URI - {rec.harvest_id}")
+                sr.rights = [{'text': rec.rights[0]}]
+    except TypeError:
+        logger.warning(f"No rights element - {rec.harvest_id}")
 
     # subject
     if rec.subject:
