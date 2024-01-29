@@ -29,7 +29,22 @@ def ssdn_dc_bepress_map(rec):
         logger.info(f"No date - {rec.harvest_id}")
 
     # description
-    sr.description = rec.description
+    # thumbnail
+    """
+    Bepress DC maps the thumbnail URL to a dc:description field
+
+    Checking against `https://digitalcommons` can redirect the URL into the tn
+    variable for hosted Bepress users 
+    """
+    tn = None
+    description_list = []
+    for desc in rec.description:
+        if desc.startswith('https://digitalcommons'):
+            tn = desc
+        else:
+            description_list.append(desc)
+
+    sr.description = description_list
 
     # format
     sr.format = rec.format
@@ -78,7 +93,5 @@ def ssdn_dc_bepress_map(rec):
     # type
     sr.type = rec.type
 
-    # thumbnail
-    tn = None
-
     yield sr, tn
+
