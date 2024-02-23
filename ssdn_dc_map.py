@@ -84,5 +84,7 @@ def ssdn_dc_map(rec):
     # thumbnail
     if rec.thumbnail:
         tn = rec.thumbnail
+    else:
+        tn = None
 
     yield sr, tn
