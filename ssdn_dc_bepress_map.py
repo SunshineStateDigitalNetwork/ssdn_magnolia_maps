@@ -36,15 +36,19 @@ def ssdn_dc_bepress_map(rec):
     Checking against `https://digitalcommons` can redirect the URL into the tn
     variable for hosted Bepress users 
     """
-    tn = None
-    description_list = []
-    for desc in rec.description:
-        if desc.startswith('https://digitalcommons'):
-            tn = desc
-        else:
-            description_list.append(desc)
+    try:
+        tn = None
+        description_list = []
+        for desc in rec.description:
+            if desc.startswith('https://digitalcommons'):
+                tn = desc
+            else:
+                description_list.append(desc)
 
-    sr.description = description_list
+        sr.description = description_list
+    
+    except Type Error:
+        pass
 
     # format
     sr.format = rec.format
