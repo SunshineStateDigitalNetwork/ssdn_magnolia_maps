@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<oai>
+  <record xmlns="http://www.openarchives.org/OAI/2.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <header>
+      <identifier>oai:digitalcommons.usf.edu:dobson-1011</identifier>
+      <datestamp>2023-06-14T12:56:15Z</datestamp>
+      <setSpec>publication:dobson_collection</setSpec>
+      <setSpec>publication:dobson</setSpec>
+      <setSpec>publication:tampa_spc</setSpec>
+      <setSpec>publication:floridiana</setSpec>
+      <setSpec>publication:digital_collections</setSpec>
+      <setSpec>publication:fl_studies</setSpec>
+      <setSpec>publication:tampa_digital_collections</setSpec>
+      <setSpec>publication:lib</setSpec>
+    </header>
+    <metadata>
+      <oai_dc:dc xmlns:oai_dc="http://www.openarchives.org/OAI/2.0/oai_dc/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.openarchives.org/OAI/2.0/oai_dc/ http://www.openarchives.org/OAI/2.0/oai_dc.xsd">
+        <dc:title>Letter, Henry Dobson to Mamma, June 6, 1898</dc:title>
+        <dc:creator>Dobson, Henry A.</dc:creator>
+        <dc:date>1898-06-06T08:00:00Z</dc:date>
+        <dc:description>&lt;p&gt;A letter from Henry Dobson to his mother on the occasion of his birthday.&lt;/p&gt;</dc:description>
+        <dc:description>The night before 90:990 ChristmaZ (regex test)</dc:description>
+        <dc:format>What does bepress map to format?</dc:format>
+        <dc:subject>Military life</dc:subject>
+        <dc:subject>Spanish-American War (1898)</dc:subject>
+        <dc:coverage>Tampa (Fla.)</dc:coverage>
+        <dc:source>&lt;a href="https://archives.lib.usf.edu/repositories/2/resources/156"&gt;Henry A. Dobson Papers&lt;/a&gt;</dc:source>
+        <dc:language>English</dc:language>
+        <dc:type>Text</dc:type>
+        <dc:identifier>D15-00003</dc:identifier>
+        <dc:rights>http://rightsstatements.org/vocab/NoC-US/1.0/</dc:rights>
+        <dc:rights>some text</dc:rights>
+        <dc:identifier>https://digitalcommons.usf.edu/dobson/12</dc:identifier>
+        <dc:description>https://digitalcommons.usf.edu/dobson/1011/thumbnail.jpg</dc:description>
+      </oai_dc:dc>
+    </metadata>
+  </record>
+</oai>

@@ -437,6 +437,7 @@ class USFCustomMapTestCase(unittest.TestCase):
 
     def test_usf_dc_custom_map(self):
         transformation_info = {'Map': 'ssdn_dc_map',
+                               #'Map': 'ssdn_dc_bepress_map',  # test
                                'DataProvider': 'University of South Florida Libraries',
                                'IntermediateProvider': None,
                                'Scenario': 'SSDNDC'}
@@ -445,6 +446,24 @@ class USFCustomMapTestCase(unittest.TestCase):
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[18])
 
+
+class SSDN_DC_BePressMapTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self = stand_up(self)
+
+    def tearDown(self):
+        clean()
+
+    def test_ssdn_dc_bepress_map(self):
+        transformation_info = {'Map': 'ssdn_dc_bepress_map',  # test
+                               'DataProvider': 'University of South Florida Libraries',
+                               'IntermediateProvider': None,
+                               'Scenario': 'SSDNDC'}
+        transform(self.config, transformation_info, 'ssdn_dc_bepress', 'ssdn', verbosity=1)
+        with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
+            test_data = json.load(fp)
+        self.assertEqual(test_data, self.data[21])
 
 if __name__ == '__main__':
     unittest.main()

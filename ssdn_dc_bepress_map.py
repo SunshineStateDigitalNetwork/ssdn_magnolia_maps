@@ -47,7 +47,7 @@ def ssdn_dc_bepress_map(rec):
 
         sr.description = description_list
     
-    except Type Error:
+    except TypeError:
         pass
 
     # format
