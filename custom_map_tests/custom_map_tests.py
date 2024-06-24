@@ -465,5 +465,25 @@ class SSDN_DC_BePressMapTestCase(unittest.TestCase):
             test_data = json.load(fp)
         self.assertEqual(test_data, self.data[21])
 
+
+class MartinCountyCustomMapTestCase(unittest.TestCase):
+
+    def setUp(self):
+        self = stand_up(self)
+
+    def tearDown(self):
+        clean()
+
+    def test_ssdn_dc_bepress_map(self):
+        transformation_info = {'Map': 'martin_county_dc_map',  # test
+                               'DataProvider': 'Martin County Library System',
+                               'IntermediateProvider': None,
+                               'Scenario': 'SSDNDC'}
+        transform(self.config, transformation_info, 'martin_county', 'ssdn', verbosity=1)
+        with open(os.path.join(test_dir_path, 'transformation_test_data', f'SSDN_TMP-{date.today()}.jsonl')) as fp:
+            test_data = json.load(fp)
+        self.assertEqual(test_data, self.data[22])
+
+
 if __name__ == '__main__':
     unittest.main()
