@@ -1,6 +1,7 @@
 import logging
 
 from manatus import SourceResource
+from manatus.exceptions import SourceResourceRequiredElementException
 
 logger = logging.getLogger(__name__)
 logger.addHandler(logging.NullHandler())
@@ -71,7 +72,10 @@ def ssdn_qdc_map(rec):
         sr.subject = [{'name': subject} for subject in rec.subject]
 
     # title
-    sr.title = rec.title
+    try:
+        sr.title = rec.title
+    except SourceResourceRequiredElementException:
+        logger.error(f"No title - {rec.harvest_id}")
 
     # type
     sr.type = rec.type
