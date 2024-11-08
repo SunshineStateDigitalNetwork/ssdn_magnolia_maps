@@ -389,6 +389,7 @@ class InternetArchiveCustomMapTestCase(unittest.TestCase):
             with open(os.path.join(test_dir_path,
                                    'transformation_test_data/statelibraryandarchivesofflorida.json')) as state_lib_data:
                 self.text = state_lib_data.read()
+                self.status_code = 200
 
     def setUp(self):
         self = stand_up(self)
